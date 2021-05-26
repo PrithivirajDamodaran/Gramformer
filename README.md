@@ -4,4 +4,6 @@
 # Gramformer
 A grammar error detection and correction framework to help in assisted writing.
 
-<center><img src="images/Logo .png" width="25%" height="25%"/></center>
+<div style="text-align: center">
+  <img src="images/Logo .png" width="25%" height="25%"/>
+<div>
