@@ -5,7 +5,7 @@
     <img src="images/Logo .png" width="25%" height="25%"/>
 </p>
 
-# Gramformer
+# what is Gramformer ?
 A grammar error detection and correction framework to help in assisted writing.
 
 
