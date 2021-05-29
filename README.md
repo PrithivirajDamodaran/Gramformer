@@ -56,11 +56,11 @@ corrected_sentence = gf.correct("you input sentence")
 
 ## Models
 
-|      Model          |Type                          |Description                         |
+|      Model          |Type                          |Return                         |
 |----------------|-------------------------------|-----------------------------|
-|prithivida/gramformer_detector_on_BART |Classifier |returns a label           |
-|prithivida/gramformer_highlighter_on_T5|Seq2Seq    |returns the input sentence with grammar errors enclosed within tags <e> </e>           |
-|prithivida/gramformer_corrector_on_T5  |Seq2Seq    |returns the corrected sentence   | 
+|prithivida/gramformer_detector_on_BART |Classifier |Label                             |
+|prithivida/gramformer_highlighter_on_T5|Seq2Seq    |The input sentence with grammar errors enclosed within tags <e> </e> |
+|prithivida/gramformer_corrector_on_T5  |Seq2Seq    |The corrected sentence              | 
 
 
 ## Dataset
