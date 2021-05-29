@@ -50,11 +50,10 @@ Gramformer exposes 3 seperate interfaces to detect, highlight or correct grammar
 
 ## References
 
-[a good paraphrase](https://www.aclweb.org/anthology/D10-1090.pdf)
 [Corpora Generation for Grammatical Error Correction](https://www.aclweb.org/anthology/N19-1333.pdf)
-[Improving Grammatical Error Correction with Machine Translation Pairs]()
-[Improving Grammatical Error Correction Models with Purpose-Built Adversarial Examples]() 
-[MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking]() 
+[Improving Grammatical Error Correction with Machine Translation Pairs](https://www.aclweb.org/anthology/2020.findings-emnlp.30.pdf)
+[Improving Grammatical Error Correction Models with Purpose-Built Adversarial Examples](https://www.aclweb.org/anthology/2020.emnlp-main.228.pdf) 
+[MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](https://aaai.org/ojs/index.php/AAAI/article/view/5476#:~:text=By%20adding%20random%20masks%20to,correction%20model%20without%20additional%20data.) 
 
 
 
