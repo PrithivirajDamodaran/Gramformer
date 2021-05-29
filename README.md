@@ -22,7 +22,7 @@ Gramformer exposes 3 seperate interfaces to detect, highlight or correct grammar
 
 ### Use-cases:
 
-**Machine-Language generation is becoming mainstream, so post processing for model generated text will come in handy.**
+**Area 1:Machine-Language generation is becoming mainstream, so post processing for model generated text will come in handy.**
 
 <ul>
     <li>NMT: Machine Translated text.</li>
@@ -34,19 +34,17 @@ Gramformer exposes 3 seperate interfaces to detect, highlight or correct grammar
     <li>Free-form text generation (Text generation).</li>
 </ul>
     
-**Assisted writing for humans**
+**Area 2:Assisted writing for humans**
 <ul>
     <li>Integrating into custom Text editors of your Apps.</li>
 </ul>    
 
-**Platform integration**
+**Area 3:Platform integration**
 <ul>
 <li>Today for authoring social contents (Post or Comments) platforms don’t have a lot of grammatical safety nets. The onus is on the author to install tools like grammarly to proof read. Instead, platforms could do an automatic style and grammar check and correct without altering the meaning or intent.
     Post-processing for automatically extracted/scraped text.</li>
 </ul>    
 
-
-## Citations
 
 ## References
 
@@ -55,6 +53,7 @@ Gramformer exposes 3 seperate interfaces to detect, highlight or correct grammar
 - [Improving Grammatical Error Correction Models with Purpose-Built Adversarial Examples](https://www.aclweb.org/anthology/2020.emnlp-main.228.pdf) 
 - [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](https://aaai.org/ojs/index.php/AAAI/article/view/5476#:~:text=By%20adding%20random%20masks%20to,correction%20model%20without%20additional%20data.) 
 
-
+## Citations
+TBD
 
 
