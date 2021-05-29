@@ -8,6 +8,15 @@
 # Gramformer
 Text, whether it is human generated or machine generated, suffers from grammatical and typograhical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a family of algorithms which can help you detect, highlight and correct above errors.
 
+## Quick Start
+```python
+from gramformer import Gramformer
+gf = Gramformer(models = [], use_gpu=False)
+corrected_sentence = gf.correct("you input sentence")
+```
+
+## Examples
+
 ## Applications of Gramformer
 Gramformer exposes 3 seperate interfaces to detect, highlight or correct grammar errors and you can use them in one or more of the following areas:
 
@@ -36,6 +45,16 @@ Gramformer exposes 3 seperate interfaces to detect, highlight or correct grammar
     Post-processing for automatically extracted/scraped text.</li>
 </ul>    
 
+
+## Citations
+
+## References
+<ul>
+<li>[Corpora Generation for Grammatical Error Correction]() </li> 
+<li>[Improving Grammatical Error Correction with Machine Translation Pairs]()</li> 
+<li>[Improving Grammatical Error Correction Models with Purpose-Built Adversarial Examples	]()</li> 
+<li>[MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking]()</li> 
+</ul>
 
 
 
