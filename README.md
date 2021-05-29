@@ -55,7 +55,13 @@ corrected_sentence = gf.correct("you input sentence")
 </ul>    
 
 ## Models
-TBD
+
+|      Model          |Type                          |Description                         |
+|----------------|-------------------------------|-----------------------------|
+|prithivida/gramformer_detector_on_BART |Classifier |returns a label           |
+|prithivida/gramformer_highlighter_on_T5|Seq2Seq    |returns the input sentence with grammar errors enclosed within tags <e> </e>           |
+|prithivida/gramformer_corrector_on_T5  |Seq2Seq    |returns the corrected sentence   | 
+
 
 ## Dataset
 The dataset was generated using the techniques mentioned in the first paper highlighted in reference section. 
