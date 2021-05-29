@@ -11,7 +11,7 @@ Text, human  or machine generated, often suffers from grammatical and typograhic
 ## Quick Start
 ```python
 from gramformer import Gramformer
-gf = Gramformer(models = ["corrector"], use_gpu=False)
+gf = Gramformer(models = [2], use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
 corrected_sentence = gf.correct("you input sentence")
 ```
 
