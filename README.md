@@ -6,7 +6,7 @@
 </p>
 
 # Gramformer
-Text, whether it is human generated or machine generated, suffers from grammatical and typograhical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a family of algorithms exposes 3 seperate interfaces to detect, highlight or correct grammar errors and you can use them in one or more areas mentioned under the applications section/
+Text, human  or machine generated, often suffers from grammatical and typograhical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight or correct** grammar errors. You can use them in one or more areas mentioned under the "applications" section.
 
 ## Quick Start
 ```python
@@ -17,10 +17,7 @@ corrected_sentence = gf.correct("you input sentence")
 
 ## Examples
 
-## Applications of Gramformer
-You directly use gramformer in one of the following areas/usecases
-
-### Use-cases:
+## Usecases for Gramformer
 
 **Area 1:Machine-Language generation is becoming mainstream, so post processing for model generated text will come in handy.**
 
