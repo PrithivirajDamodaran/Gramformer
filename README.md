@@ -59,7 +59,7 @@ corrected_sentence = gf.correct("you input sentence")
 |      Model          |Type                          |Return                         |
 |----------------|-------------------------------|-----------------------------|
 |prithivida/gramformer_detector_on_BART |Classifier |Label                             |
-|prithivida/gramformer_highlighter_on_T5|Seq2Seq    |The input with grammar errors enclosed in tags <e> </e> |
+|prithivida/gramformer_highlighter_on_T5|Seq2Seq    |The input with grammar errors enclosed in delimiters estart and eend |
 |prithivida/gramformer_corrector_on_T5  |Seq2Seq    |The corrected sentence              | 
 
 
