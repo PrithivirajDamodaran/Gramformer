@@ -34,13 +34,13 @@ corrected_sentence = gf.correct("you input sentence")
 **Area 1:Machine-Language generation is becoming mainstream, so post processing for model generated text will come in handy.**
 
 <ul>
-    <li>NMT: Machine Translated text.</li>
-    <li>ASR or STT: Speech to text.</li>
-    <li>HTR: Handwritten text recognition.</li>
-    <li>Paraphrase generation.</li>
-    <li>Conditioned Text generation (Text2Text generation).</li>
-    <li>Controlled Text generation (Text generation with PPLM).</li>
-    <li>Free-form text generation (Text generation).</li>
+    <li>NMT: Machine Translated output.</li>
+    <li>ASR or STT: Speech to text output.</li>
+    <li>HTR: Handwritten text recognition output.</li>
+    <li>Paraphrase generation output.</li>
+    <li>Conditioned Text generation output(Text2Text generation).</li>
+    <li>Controlled Text generation output(Text generation with PPLM).</li>
+    <li>Free-form text generation output(Text generation).</li>
 </ul>
     
 **Area 2:Assisted writing for humans**
