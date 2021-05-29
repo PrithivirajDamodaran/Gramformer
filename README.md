@@ -2,7 +2,7 @@
 [![Visits Badge](https://badges.pufler.dev/visits/PrithivirajDamodaran/Parrot_Paraphraser)](https://badges.pufler.dev)
 
 <p align="center">
-    <img src="images/GLogo.png" width="45%" height="45%"/>
+    <img src="images/GLogo.png" width="35%" height="35%"/>
 </p>
 
 # Gramformer
