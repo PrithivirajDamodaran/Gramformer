@@ -6,7 +6,7 @@
 </p>
 
 # Gramformer
-Text, human or machine generated, often suffers from grammatical and typograhical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight or correct** grammar errors. You can use them in one or more areas mentioned under the "use-cases" section or as you see fit.
+Human and machine generated text often suffers from grammatical and/or typograhical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight and correct** grammar errors. You can use them in one or more areas mentioned under the "use-cases" section below or as you see fit.
 
 ## Table of contents
 - [Installation](#installation)
