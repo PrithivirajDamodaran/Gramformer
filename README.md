@@ -6,8 +6,19 @@
 </p>
 
 # Gramformer
-Text, human  or machine generated, often suffers from grammatical and typograhical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight or correct** grammar errors. You can use them in one or more areas mentioned under the "use-cases" section or as you see fit.
+Text, human or machine generated, often suffers from grammatical and typograhical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight or correct** grammar errors. You can use them in one or more areas mentioned under the "use-cases" section or as you see fit.
 
+## Table of contents
+- [Quick Start](#quick-start)
+- [Examples](#examples)
+- [Usecases for Gramformer](#usecases-for-gramformer)
+- [References](#references)
+- [Citations](#citations)
+
+## Installtion
+```python
+pip install gramformer
+```
 ## Quick Start
 ```python
 from gramformer import Gramformer
