@@ -31,7 +31,9 @@ corrected_sentence = gf.correct("you input sentence")
 
 ## Usecases for Gramformer
 
-**Area 1:Machine-Language generation is becoming mainstream, so post processing for model generated text will come in handy.**
+**Area 1: Post-processing machine generated text**
+
+Machine-Language generation is becoming mainstream so will post-processing
 
 <ul>
     <li>NMT: Machine Translated output.</li>
@@ -43,24 +45,31 @@ corrected_sentence = gf.correct("you input sentence")
     <li>Free-form text generation output(Text generation).</li>
 </ul>
     
-**Area 2:Assisted writing for humans**
+**Area 2:Human-In-The-Loop text
 <ul>
-    <li>Integrating into custom Text editors of your Apps.</li>
+    <li>Most Superised NLU (Chatbots and Conversational) systems need humans/experts to enter or edit text which need grammtical corrections</li>
+</ul>    
+    
+**Area 3:Assisted writing for humans**
+<ul>
+    <li>Integrating into custom Text editors of your Apps. (A Poor man's grammarly, if you will) </li>
 </ul>    
 
-**Area 3:Platform integration**
+**Area 4:Custom Platform integration**
 <ul>
-<li>Today for authoring social contents (Post or Comments) platforms don’t have a lot of grammatical safety nets. The onus is on the author to install tools like grammarly to proof read. Instead, platforms could do an automatic style and grammar check and correct without altering the meaning or intent.
-    Post-processing for automatically extracted/scraped text.</li>
+    Today grammatical safety nets for authoring social contents (Post or Comments) or text in messaging platforms is very little (word level correction) or non-existent.The onus is on the author to install tools like grammarly to proof read. 
+    
+    <li>Messaging platforms can highlight / correct grammtical errors automatically without altering the meaning or intent.</li>
+    <li> Social platforms can highlight / correct grammtical errors automatically without altering the meaning or intent.</li>
 </ul>    
 
 ## Models
 
-|      Model          |Type                          |Return                         |
-|----------------|-------------------------------|-----------------------------|
-|prithivida/grammar_error_detector |Classifier |Label                             |
-|prithivida/grammar_error_highlighter|Seq2Seq    |The input with grammar errors enclosed in delimiters estart and eend |
-|prithivida/grammar_error_correcter  |Seq2Seq    |The corrected sentence              | 
+|      Model          |Type                          |Return                         |status|
+|----------------|-------------------------------|-----------------------------|-----------------------------|
+|prithivida/grammar_error_detector |Classifier |Label                             |TBD|
+|prithivida/grammar_error_highlighter|Seq2Seq    |The input with grammar errors enclosed in delimiters estart and eend |Available in HF|
+|prithivida/grammar_error_correcter  |Seq2Seq    |The corrected sentence              |Available in HF|
 
 
 ## Dataset
