@@ -40,8 +40,8 @@ Machine-Language generation is becoming mainstream so will post-processing machi
     - ASR or STT: Speech to text output.
     - HTR: Handwritten text recognition output.
     - Paraphrase generation output.
-- Controlled Text generation output(Text generation with PPLM) [TBD].
-- Free-form text generation output(Text generation)[TBD].
+- Controlled Text generation output(Text generation with PPLM) **[TBD]**.
+- Free-form text generation output(Text generation)**[TBD]**.
 
     
 **Area 2:Human-In-The-Loop (HITL) text**
