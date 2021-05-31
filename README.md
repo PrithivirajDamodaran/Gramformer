@@ -74,7 +74,7 @@ As of today grammatical safety nets for authoring social contents (Post or Comme
 
 
 ## Dataset
-The dataset was generated using the techniques mentioned in the first paper highlighted in reference section. 
+The dataset was generated using the techniques mentioned in the first paper highlighted in reference section. You can use the technique on anyone of the publicy available [wikipedia edits datasets](https://snap.stanford.edu/data/wiki-meta.html#:~:text=Dataset%20information,Parsed%20Wikipedia%20edit%20history). Write some rules to filter only the grammatical edits, do some cleanup and thats it Bob's your uncle :-).
 
 ## References
 
