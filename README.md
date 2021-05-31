@@ -33,7 +33,7 @@ corrected_sentence = gf.correct("you input sentence")
 
 **Area 1: Post-processing machine generated text**
 
-Machine-Language generation is becoming mainstream so will post-processing
+Machine-Language generation is becoming mainstream so will post-processing machine generated text.
 
 <ul>
     <li>NMT: Machine Translated output.</li>
@@ -45,9 +45,9 @@ Machine-Language generation is becoming mainstream so will post-processing
     <li>Free-form text generation output(Text generation).</li>
 </ul>
     
-**Area 2:Human-In-The-Loop text
+**Area 2:Human-In-The-Loop (HITL) text
 <ul>
-    <li>Most Superised NLU (Chatbots and Conversational) systems need humans/experts to enter or edit text which need grammtical corrections</li>
+    <li>Most Supervised NLU (Chatbots and Conversational) systems need humans/experts to enter or edit text that needs to be grammtical correct otherwise the quality of HITL data can degrade the model over a period of time </li>
 </ul>    
     
 **Area 3:Assisted writing for humans**
