@@ -45,7 +45,7 @@ Machine-Language generation is becoming mainstream so will post-processing machi
     <li>Free-form text generation output(Text generation).</li>
 </ul>
     
-**Area 2:Human-In-The-Loop (HITL) text
+**Area 2:Human-In-The-Loop (HITL) text**
 <ul>
     <li>Most Supervised NLU (Chatbots and Conversational) systems need humans/experts to enter or edit text that needs to be grammtical correct otherwise the quality of HITL data can degrade the model over a period of time </li>
 </ul>    
