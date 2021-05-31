@@ -56,10 +56,11 @@ Machine-Language generation is becoming mainstream so will post-processing
 </ul>    
 
 **Area 4:Custom Platform integration**
+
+As of today grammatical safety nets for authoring social contents (Post or Comments) or text in messaging platforms is very little (word level correction) or non-existent.The onus is on the author to install tools like grammarly to proof read. 
+
 <ul>
-    Today grammatical safety nets for authoring social contents (Post or Comments) or text in messaging platforms is very little (word level correction) or non-existent.The onus is on the author to install tools like grammarly to proof read. 
-    
-    <li>Messaging platforms can highlight / correct grammtical errors automatically without altering the meaning or intent.</li>
+    <li> Messaging platforms can highlight / correct grammtical errors automatically without altering the meaning or intent.</li>
     <li> Social platforms can highlight / correct grammtical errors automatically without altering the meaning or intent.</li>
 </ul>    
 
@@ -67,7 +68,7 @@ Machine-Language generation is becoming mainstream so will post-processing
 
 |      Model          |Type                          |Return                         |status|
 |----------------|-------------------------------|-----------------------------|-----------------------------|
-|prithivida/grammar_error_detector |Classifier |Label                             |TBD|
+|prithivida/grammar_error_detector |Classifier |Label                             |TBD (prithivida/parrot_fluency_on_BERT can be repurposed here, but I would recommend you wait :-))|
 |prithivida/grammar_error_highlighter|Seq2Seq    |The input with grammar errors enclosed in delimiters estart and eend |Available in HF|
 |prithivida/grammar_error_correcter  |Seq2Seq    |The corrected sentence              |Available in HF|
 
