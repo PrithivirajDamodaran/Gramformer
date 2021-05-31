@@ -35,15 +35,14 @@ corrected_sentence = gf.correct("you input sentence")
 
 Machine-Language generation is becoming mainstream so will post-processing machine generated text.
 
-<ul>
-    <li>NMT: Machine Translated output.</li>
-    <li>ASR or STT: Speech to text output.</li>
-    <li>HTR: Handwritten text recognition output.</li>
-    <li>Paraphrase generation output.</li>
-    <li>Conditioned Text generation output(Text2Text generation).</li>
-    <li>Controlled Text generation output(Text generation with PPLM).</li>
-    <li>Free-form text generation output(Text generation).</li>
-</ul>
+- Conditioned Text generation output(Text2Text generation).
+    - NMT: Machine Translated output.
+    - ASR or STT: Speech to text output.
+    - HTR: Handwritten text recognition output.
+    - Paraphrase generation output.
+- Controlled Text generation output(Text generation with PPLM) [TBD].
+- Free-form text generation output(Text generation)[TBD].
+
     
 **Area 2:Human-In-The-Loop (HITL) text**
 <ul>
