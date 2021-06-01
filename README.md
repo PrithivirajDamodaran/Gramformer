@@ -1,12 +1,12 @@
-[![PyPI - License](https://img.shields.io/hexpm/l/plug)](https://github.com/PrithivirajDamodaran/Parrot/blob/main/LICENSE)
-[![Visits Badge](https://badges.pufler.dev/visits/PrithivirajDamodaran/Parrot_Paraphraser)](https://badges.pufler.dev)
+[![PyPI - License](https://img.shields.io/hexpm/l/plug)](https://github.com/PrithivirajDamodaran/Gramformer/blob/main/LICENSE)
+[![Visits Badge](https://badges.pufler.dev/visits/PrithivirajDamodaran/Gramformer)](https://badges.pufler.dev)
 
 <p align="center">
     <img src="images/GLogo.png" width="35%" height="35%"/>
 </p>
 
 # Gramformer
-Human and machine generated text often suffers from grammatical and/or typograhical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight and correct** grammar errors. You can use them in one or more areas mentioned under the "use-cases" section below or as you see fit. *Note: It works at **sentence levels** and has been trained on 128 length sentences, so not suitable for long prose or paragraphs.*
+Human and machine generated text often suffer from grammatical and/or typographical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight and correct** grammar errors. You can use them in one or more areas mentioned under the "use-cases" section below or as you see fit. *Note: It works at **sentence levels** and has been trained on 128 length sentences, so not suitable for long prose or paragraphs.*
 
 ## Table of contents
 - [Installation](#installation)
