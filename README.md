@@ -21,13 +21,20 @@ Human and machine generated text often suffer from grammatical and/or typographi
 pip install gramformer
 ```
 ## Quick Start
+
+### Correction
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-corrected_sentence = gf.correct("you input sentence")
+corrected_sentence = gf.correct("your input sentence")
+```
+### Highlight
+```python
+from gramformer import Gramformer
+gf = Gramformer(models = 1, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
+highlighted_sentence = gf.highlight("your input sentence")
 ```
 
-## Examples
 
 ## Usecases for Gramformer
 
@@ -67,7 +74,7 @@ As of today grammatical safety nets for authoring social contents (Post or Comme
 |      Model          |Type                          |Return                         |status|
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |prithivida/grammar_error_detector |Classifier |Label                             |TBD (prithivida/parrot_fluency_on_BERT can be repurposed here, but I would recommend you wait :-))|
-|prithivida/grammar_error_highlighter|Seq2Seq    |Grammar errors enclosed in <pre> <e> and </e> </pre> |Alpha |
+|prithivida/grammar_error_highlighter|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |Alpha |
 |prithivida/grammar_error_correcter  |Seq2Seq    |The corrected sentence              |Beta|
 
 
