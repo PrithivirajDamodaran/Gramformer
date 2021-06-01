@@ -1,5 +1,5 @@
 [![PyPI - License](https://img.shields.io/hexpm/l/plug)](https://github.com/PrithivirajDamodaran/Gramformer/blob/main/LICENSE)
-[![Visits Badge](https://badges.pufler.dev/visits/PrithivirajDamodaran/Gramformer)](https://badges.pufler.dev)
+[![Visits Badge](https://badges.pufler.dev/visits/PrithivirajDamodaran/Parrot)](https://badges.pufler.dev)
 
 <p align="center">
     <img src="images/GLogo.png" width="35%" height="35%"/>
