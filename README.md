@@ -58,10 +58,9 @@ Machine-Language generation is becoming mainstream so will post-processing machi
 
 As of today grammatical safety nets for authoring social contents (Post or Comments) or text in messaging platforms is very little (word level correction) or non-existent.The onus is on the author to install tools like grammarly to proof read. 
 
-<ul>
-    <li> Messaging platforms can highlight / correct grammtical errors automatically without altering the meaning or intent.</li>
-    <li> Social platforms can highlight / correct grammtical errors automatically without altering the meaning or intent.</li>
-</ul>    
+- Messaging platforms and Social platforms can highlight / correct grammtical errors automatically without altering the meaning or intent.
+
+
 
 ## Models
 
