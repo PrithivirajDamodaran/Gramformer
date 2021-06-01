@@ -67,7 +67,7 @@ As of today grammatical safety nets for authoring social contents (Post or Comme
 |      Model          |Type                          |Return                         |status|
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |prithivida/grammar_error_detector |Classifier |Label                             |TBD (prithivida/parrot_fluency_on_BERT can be repurposed here, but I would recommend you wait :-))|
-|prithivida/grammar_error_highlighter|Seq2Seq    |Grammar errors enclosed in <p> <e> and </e> <p> |Alpha |
+|prithivida/grammar_error_highlighter|Seq2Seq    |Grammar errors enclosed in <pre> <e> and </e> </pre> |Alpha |
 |prithivida/grammar_error_correcter  |Seq2Seq    |The corrected sentence              |Beta|
 
 
