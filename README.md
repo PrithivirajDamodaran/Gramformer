@@ -88,37 +88,36 @@ influent_sentences = [
 
 for influent_sentence in influent_sentences:
     corrected_sentence = gf.correct(influent_sentence)
-    print(row)
-    print(corrected_sentence[0])
+    print("[Input] ", influent_sentence)
+    print("[Correction] ",corrected_sentence[0])
     print("-" *100)
 ```
 
 ```text
-Matt like fish
-Matt likes fish
+[Input]  Matt like fish
+[Correction]  Matt likes fish
 ----------------------------------------------------------------------------------------------------
-the collection of letters was original used by the ancient Romans
-The collection of letters was originally used by the ancient Romans.
+[Input]  the collection of letters was original used by the ancient Romans
+[Correction]  The collection of letters was originally used by the ancient Romans.
 ----------------------------------------------------------------------------------------------------
-We enjoys horror movies
-We enjoy horror movies
+[Input]  We enjoys horror movies
+[Correction]  We enjoy horror movies
 ----------------------------------------------------------------------------------------------------
-Anna and Mike is going skiing
-Anna and Mike are going skiing
+[Input]  Anna and Mike is going skiing
+[Correction]  Anna and Mike are going skiing
 ----------------------------------------------------------------------------------------------------
-I walk to the store and I bought milk
-I walked to the store and bought milk.
+[Input]  I walk to the store and I bought milk
+[Correction]  I walked to the store and bought milk.
 ----------------------------------------------------------------------------------------------------
-We all eat the fish and then made dessert
-We all ate the fish and then made dessert
+[Input]  We all eat the fish and then made dessert
+[Correction]  We all ate the fish and then made dessert
 ----------------------------------------------------------------------------------------------------
-I will eat fish for dinner and drank milk
-I'll eat fish for dinner and drink milk.
+[Input]  I will eat fish for dinner and drank milk
+[Correction]  I'll eat fish for dinner and drink milk.
 ----------------------------------------------------------------------------------------------------
-what be the reason for everyone leave the company
-what can be the reason for everyone to leave the company.
-----------------------------------------------------------------------------------------------------
-```
+[Input]  what be the reason for everyone leave the company
+[Correction]  what can be the reason for everyone to leave the company.
+----------------------------------------------------------------------------------------------------```
 
 ### Challenge with generative models
 While as proposed Gramformer can help post-process outputs from the generative models, Gramformer by in itself a generative model (I know very meta :-)). All generative models have the tendency to generate spurious text sometimes which we cannot control. So to make sure the gramformer grammar corrections (highlight and detection) are as accurate as possible, It will soon come with a quality estimator (QE) that can estimate the error correction quality, act as a filter on Top-N candidates and return only the best based on a QE score.
@@ -149,7 +148,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |prithivida/grammar_error_detector |Classifier |Label                             |TBD (prithivida/parrot_fluency_on_BERT can be repurposed here, but I would recommend you wait :-))|
 |prithivida/grammar_error_highlighter|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |Beta |
-|prithivida/grammar_error_correcter  |Seq2Seq    |The corrected sentence              |Stable|
+|prithivida/grammar_error_correcter  |Seq2Seq    |The corrected sentence              |Beta|
 
 
 ## Dataset
