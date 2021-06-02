@@ -88,6 +88,9 @@ influent_sentences = [
 
 for influent_sentence in influent_sentences:
     corrected_sentence = gf.correct(influent_sentence)
+    print(row)
+    print(corrected_sentence[0])
+    print("-" *100)
 ```
 
 ```text
