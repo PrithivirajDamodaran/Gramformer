@@ -127,7 +127,7 @@ While Gramformer aims to post-process outputs from the generative models, Gramfo
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-corrected_sentence = gf.correct(<your input sentence>, filter_by_qe=True, max_candidates=3)
+corrected_sentence = gf.correct(<your input sentence>, filter_by_quality=True, max_candidates=3)
 ```
 
 ### Highlighter - [Coming soon !]
