@@ -27,7 +27,7 @@ Human and machine generated text often suffer from grammatical and/or typographi
 
 **Area 1: Post-processing machine generated text**
 
-Machine-Language generation is becoming mainstream so will post-processing machine generated text.
+Machine-Language generation is becoming mainstream, so will post-processing machine generated text.
 
 - Conditioned Text generation output(Text2Text generation).
     - NMT: Machine Translated output.
