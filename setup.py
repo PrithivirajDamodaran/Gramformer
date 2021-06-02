@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="gramformer",
-    version="1.0",
+    version="0.1",
     author="prithiviraj damodaran",
     author_email="d.prithiviraj@gmail.com",
     description="Gramformer",
