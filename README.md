@@ -10,18 +10,18 @@ Human and machine generated text often suffer from grammatical and/or typographi
 
 ## Table of contents
 - [Usecases for Gramformer](#usecases-for-gramformer)
-- [Challenge with generative models](#challenge-with-generative-models)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
   * [Correction - [Available now]](#correction----available-now-)
-  * [Highlight - [Soon to be released]](#highlight----soon-to-be-released-)
-  * [Detector - [Soon to be released]](#detector----soon-to-be-released-)
+- [Challenge with generative models](#challenge-with-generative-models)
+  * [Correction with QE estimator - [Coming soon !]](#correction-with-qe-estimator----coming-soon---)
+  * [Highlight - [Coming soon !]](#highlight----coming-soon---)
+  * [Detector - [Coming soon !]](#detector----coming-soon---)
 - [Models](#models)
 - [Dataset](#dataset)
 - [Benchmark](#benchmark)
 - [References](#references)
 - [Citation](#citation)
-
 
 ## Usecases for Gramformer
 
