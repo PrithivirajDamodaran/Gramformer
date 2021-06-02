@@ -85,20 +85,20 @@ While as proposed Gramformer can help post-process outputs from the generative m
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-corrected_sentence = gf.correct(<your influent_sentence>, filter_by_qe=True, max_candidates=3)
+corrected_sentence = gf.correct(<your input sentence>, filter_by_qe=True, max_candidates=3)
 ```
 
 ### Highlight - [Coming soon !]
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 1, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-highlighted_sentence = gf.highlight("your input sentence")
+highlighted_sentence = gf.highlight(<your input sentence>)
 ```
 ### Detector - [Coming soon !]
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 0, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-grammar_fluency_score = gf.detect("your input sentence")
+grammar_fluency_score = gf.detect(<your input sentence>)
 ```
 
 ## Models
