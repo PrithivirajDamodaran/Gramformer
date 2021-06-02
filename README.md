@@ -56,7 +56,7 @@ As of today grammatical safety nets for authoring social contents (Post or Comme
 
 ## Installation
 ```python
-pip install gramformer
+pip install git+https://github.com/PrithivirajDamodaran/Gramformer.git
 ```
 ## Quick Start
 
