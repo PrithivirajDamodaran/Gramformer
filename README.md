@@ -121,7 +121,7 @@ for influent_sentence in influent_sentences:
 ```
 
 ### Challenge with generative models
-While as proposed Gramformer can help post-process outputs from the generative models, Gramformer by in itself a generative model, so the question comes who will post-process the post-processor ? (I know, very meta :-)). All generative models have the tendency to generate spurious text sometimes which we cannot control. So to make sure the gramformer grammar corrections (highlights) are as accurate as possible, It will soon come with a quality estimator (QE) that can estimate the error correction quality score, use that as a filter on Top-N candidates and return only the best based on the score.
+While Gramformer aims to post-process outputs from the generative models, Gramformer itself is a generative model. So the question arises, who will post-process the Gramformer outputs ? (I know, very meta :-)). In general all generative models have the tendency to generate spurious text sometimes, which we cannot control. So to make sure the gramformer grammar corrections (and highlights) are as accurate as possible, A quality estimator (QE) will be added. It can estimate a error correction quality score and use that as a filter on Top-N candidates to return only the best based on the score.
 
 ### Correcter with QE estimator - [Coming soon !]
 ```python
