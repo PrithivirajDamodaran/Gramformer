@@ -1,4 +1,4 @@
-class Grammformer:
+class Gramformer:
 
   def __init__(self, models=2, use_gpu=False):
     from transformers import AutoTokenizer
