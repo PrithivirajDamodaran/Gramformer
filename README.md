@@ -13,7 +13,7 @@ Human and machine generated text often suffer from grammatical and/or typographi
 - [Installation](#installation)
 - [Quick Start](#quick-start)
   * [Correction - [Available now]](#correction----available-now-)
-- [Challenge with generative models](#challenge-with-generative-models)
+  * [Challenge with generative models](#challenge-with-generative-models)
   * [Correction with QE estimator - [Coming soon !]](#correction-with-qe-estimator----coming-soon---)
   * [Highlight - [Coming soon !]](#highlight----coming-soon---)
   * [Detector - [Coming soon !]](#detector----coming-soon---)
@@ -78,7 +78,7 @@ for influent_sentence in influent_sentences:
     corrected_sentence = gf.correct(influent_sentence)
 ```
 
-## Challenge with generative models
+### Challenge with generative models
 While as proposed Gramformer can help post-process outputs from the generative models, Gramformer by in itself a generative model (I know very meta :-)). All generative models have the tendency to generate spurious text sometimes which we cannot control. So to make sure the gramformer grammar corrections (highlight and detection) are as accurate as possible, It will soon come with a quality estimator (QE) to filter the Top-N candidates and return only the best based on a QE score.
 
 ### Correction with QE estimator - [Coming soon !]
