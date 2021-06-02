@@ -60,7 +60,7 @@ pip install gramformer
 ```
 ## Quick Start
 
-### Correction - [Available now]
+### Correcter - [Available now]
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
@@ -81,14 +81,14 @@ for influent_sentence in influent_sentences:
 ### Challenge with generative models
 While as proposed Gramformer can help post-process outputs from the generative models, Gramformer by in itself a generative model (I know very meta :-)). All generative models have the tendency to generate spurious text sometimes which we cannot control. So to make sure the gramformer grammar corrections (highlight and detection) are as accurate as possible, It will soon come with a quality estimator (QE) that can estimate the error correction quality, act as a filter on Top-N candidates and return only the best based on a QE score.
 
-### Correction with QE estimator - [Coming soon !]
+### Correcter with QE estimator - [Coming soon !]
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
 corrected_sentence = gf.correct(<your input sentence>, filter_by_qe=True, max_candidates=3)
 ```
 
-### Highlight - [Coming soon !]
+### Highlighter - [Coming soon !]
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 1, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
