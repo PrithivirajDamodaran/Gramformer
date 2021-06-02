@@ -136,6 +136,43 @@ from gramformer import Gramformer
 gf = Gramformer(models = 1, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
 highlighted_sentence = gf.highlight(<your input sentence>)
 ```
+
+```text
+[Input]  Matt like fish
+[Highlight]  Matt <e> like </e> fish
+----------------------------------------------------------------------------------------------------
+[Input]  the collection of letters was original used by the ancient Romans
+[Highlight]  the collection of letters was <e> original used </e> by the ancient Romans
+----------------------------------------------------------------------------------------------------
+[Input]  We enjoys horror movies
+[Highlight]  We <e> enjoys horror </e> movies
+----------------------------------------------------------------------------------------------------
+[Input]  Anna and Mike is going skiing
+[Highlight]  Anna and Mike <e> is going </e> skiing
+----------------------------------------------------------------------------------------------------
+[Input]  I walk to the store and I bought milk
+[Highlight]  I <e> walk to </e> the store and I bought milk
+----------------------------------------------------------------------------------------------------
+[Input]  We all eat the fish and then made dessert
+[Highlight]  We all <e> eat the </e> fish and then made dessert
+----------------------------------------------------------------------------------------------------
+[Input]  I will eat fish for dinner and drank milk
+[Highlight]  I will eat fish for dinner and <e> drank milk </e> 
+----------------------------------------------------------------------------------------------------
+[Input]  what be the reason for everyone leave the company
+[Highlight]  <e> what be </e> the reason <e> for everyone </e> <e> leave the </e> company
+----------------------------------------------------------------------------------------------------
+[Input]  One of the most important issue is the lack of parking spaces at the local mall.
+[Highlight]  One of the most important <e> issue is </e> the lack of parking spaces at the local mall.
+----------------------------------------------------------------------------------------------------
+[Input]  The survey we performed recently showed that most of customers are satisfied.
+[Highlight]  The survey we performed recently showed that most <e> of customers </e> are satisfied.
+----------------------------------------------------------------------------------------------------
+[Input]  I’ve loved classical music ever since I was child.
+[Highlight]  I’ve loved classical music ever since I <e> was child </e>.
+----------------------------------------------------------------------------------------------------
+```
+
 ### Detector - [Coming soon !]
 ```python
 from gramformer import Gramformer
