@@ -6,7 +6,7 @@
 </p>
 
 # Gramformer
-Human and machine generated text often suffer from grammatical and/or typographical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight and correct** grammar errors. You can use them in one or more areas mentioned under the "use-cases" section below or as you see fit. *Note: It works at **sentence levels** and has been trained on 128 length sentences, so not (yet) suitable for long prose or paragraphs (stay tuned for upcoming releases)*
+Human and machine generated text often suffer from grammatical and/or typographical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight and correct** grammar errors. To make sure the corrections and highlights recommended are of high quality, it comes with a quality estimator. You can use Gramformer in one or more areas mentioned under the "use-cases" section below or any other usecase as you see fit. Gramformer stands on the shoulders of gaints, it combines some of the top notch researches in grammar correction. *Note: It works at **sentence levels** and has been trained on 128 length sentences, so not (yet) suitable for long prose or paragraphs (stay tuned for upcoming releases)*
 
 ## Table of contents
 - [Usecases for Gramformer](#usecases-for-gramformer)
