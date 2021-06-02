@@ -117,7 +117,8 @@ for influent_sentence in influent_sentences:
 ----------------------------------------------------------------------------------------------------
 [Input]  what be the reason for everyone leave the company
 [Correction]  what can be the reason for everyone to leave the company.
-----------------------------------------------------------------------------------------------------```
+----------------------------------------------------------------------------------------------------
+```
 
 ### Challenge with generative models
 While as proposed Gramformer can help post-process outputs from the generative models, Gramformer by in itself a generative model (I know very meta :-)). All generative models have the tendency to generate spurious text sometimes which we cannot control. So to make sure the gramformer grammar corrections (highlight and detection) are as accurate as possible, It will soon come with a quality estimator (QE) that can estimate the error correction quality, act as a filter on Top-N candidates and return only the best based on a QE score.
