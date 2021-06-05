@@ -6,7 +6,7 @@
 </p>
 
 # Gramformer
-Human and machine generated text often suffer from grammatical and/or typographical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight and correct** grammar errors. To make sure the corrections and highlights recommended are of high quality, it comes with a quality estimator. You can use Gramformer in one or more areas mentioned under the "use-cases" section below or any other usecase as you see fit. Gramformer stands on the shoulders of gaints, it combines some of the top notch researches in grammar correction. *Note: It works at **sentence levels** and has been trained on 128 length sentences, so not (yet) suitable for long prose or paragraphs (stay tuned for upcoming releases)*
+Human and machine generated text often suffer from grammatical and/or typographical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight and correct** grammar errors. To make sure the corrections and highlights recommended are of high quality, it comes with a quality estimator. You can use Gramformer in one or more areas mentioned under the "use-cases" section below or any other usecase as you see fit. Gramformer stands on the shoulders of giants, it combines some of the top notch researches in grammar correction. *Note: It works at **sentence levels** and has been trained on 128 length sentences, so not (yet) suitable for long prose or paragraphs (stay tuned for upcoming releases)*
 
 ## Table of contents
 - [Usecases for Gramformer](#usecases-for-gramformer)
@@ -40,7 +40,7 @@ Machine-Language generation is becoming mainstream, so will post-processing mach
     
 **Area 2:Human-In-The-Loop (HITL) text**
 <ul>
-    <li>Most Supervised NLU (Chatbots and Conversational) systems need humans/experts to enter or edit text that needs to be grammtical correct otherwise the quality of HITL data can degrade the model over a period of time </li>
+    <li>Most Supervised NLU (Chatbots and Conversational) systems need humans/experts to enter or edit text that needs to be grammatically correct otherwise the quality of HITL data can degrade the model over a period of time </li>
 </ul>    
     
 **Area 3:Assisted writing for humans**
