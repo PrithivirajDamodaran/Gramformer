@@ -30,10 +30,13 @@ Human and machine generated text often suffer from grammatical and/or typographi
 Machine-Language generation is becoming mainstream, so will post-processing machine generated text.
 
 - Conditioned Text generation output(Text2Text generation).
-    - NMT: Machine Translated output.
-    - ASR or STT: Speech to text output.
-    - HTR: Handwritten text recognition output.
-    - Paraphrase generation output.
+    - **NMT**: Machine Translated output.
+    - **ASR or STT**: Speech to text output.
+    - **HTR**: Handwritten text recognition output.
+    - **Text Summarisation** output.
+    - **Image caption** output.
+    - **Data or key** to Text output.
+    - **Paraphrase** generation output.
 - Controlled Text generation output(Text generation with PPLM) **[TBD]**.
 - Free-form text generation output(Text generation)**[TBD]**.
 
