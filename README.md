@@ -189,7 +189,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |prithivida/grammar_error_detector |Classifier |Label                             |TBD (prithivida/parrot_fluency_on_BERT can be repurposed here, but I would recommend you wait :-))|
 |prithivida/grammar_error_highlighter|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |Beta |
-|prithivida/grammar_error_correcter  |Seq2Seq    |The corrected sentence              |Beta|
+|[prithivida/grammar_error_correcter](https://huggingface.co/prithivida/grammar_error_correcter)  |Seq2Seq    |The corrected sentence              |Beta|
 
 
 ## Dataset
@@ -198,7 +198,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - Third source is to repurpose the [GEC Task data](https://www.cl.cam.ac.uk/research/nl/bea2019st/)
 - I combined sources 1 and 3 to get my training data (still working on source 2, will keep you posted)
 - I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records.
-- It took ~12 hours to train each of the above models.
+- Trained on a Tesla T4 GPU and it took ~12 hours to train each of the above models with 8 epochs.(Will training args shortly)
 
 ## Benchmark
 TBD (I will benchmark grammformer models against the following publicy available models: [salesken/grammar_correction](https://huggingface.co/salesken/grammar_correction) and [flexudy/t5-small-wav2vec2-grammar-fixer](flexudy/t5-small-wav2vec2-grammar-fixer) shortly.
