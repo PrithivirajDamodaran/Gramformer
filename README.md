@@ -203,7 +203,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - Trained on a Tesla T4 GPU and it took ~12 hours to train each of the above models with batch_size = 8 and epochs = 3. 
 
 ## Note for any commercial uses:
-- The pre-release is **NOT** open for any commercial uses.
+- The pre-release is **NOT** open for any form of commercial usage.
 
 ## Benchmark
 TBD (I will benchmark grammformer models against the following publicy available models: [salesken/grammar_correction](https://huggingface.co/salesken/grammar_correction), [Grammarly GECTOR](https://github.com/grammarly/gector) and [flexudy/t5-small-wav2vec2-grammar-fixer](flexudy/t5-small-wav2vec2-grammar-fixer) shortly.
