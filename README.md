@@ -19,7 +19,7 @@ Human and machine generated text often suffer from grammatical and/or typographi
   * [Detector - [Coming soon !]](#detector----coming-soon---)
 - [Models](#models)
 - [Dataset](#dataset)
-- [Note on commercial uses](#note-on-commercial-uses)
+- [Note on commercial uses and release versions](#note-on-commercial-uses)
 - [Benchmark](#benchmark)
 - [References](#references)
 - [Citation](#citation)
@@ -203,9 +203,9 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - [Update] In the stable release I am using slices of data from sources 1, 2 and 4 listed above. (The model in the above table with v1 as suffix)
 
 
-## Note on commercial uses
-- The pre-release package (and the model) is **NOT** intended for any commercial usage.
-- The stable release of the packages (and the models) are intended for commercial usage - Stable releases are v1.1 onwards
+## Note on commercial uses and release versions
+- The pre-release (any release < v1.0) package (and the model) is **NOT** intended for any commercial usage.
+- Stable releases are v1.0 onwards, current release is v1.1
 
 ## Benchmark
 TBD (I will benchmark grammformer models against the following publicy available models: [salesken/grammar_correction](https://huggingface.co/salesken/grammar_correction), [Grammarly GECTOR](https://github.com/grammarly/gector) and [flexudy/t5-small-wav2vec2-grammar-fixer](flexudy/t5-small-wav2vec2-grammar-fixer) shortly.
