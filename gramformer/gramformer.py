@@ -10,7 +10,7 @@ class Gramformer:
         device = "cpu"
 
     self.device    = device
-    correction_model_tag = "prithivida/grammar_error_correcter"
+    correction_model_tag = "prithivida/grammar_error_correcter_v1"
     
     if models == 2:
         self.correction_tokenizer = AutoTokenizer.from_pretrained(correction_model_tag)
