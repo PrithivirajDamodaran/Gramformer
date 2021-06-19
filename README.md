@@ -19,7 +19,7 @@ Human and machine generated text often suffer from grammatical and/or typographi
   * [Detector - [Coming soon !]](#detector----coming-soon---)
 - [Models](#models)
 - [Dataset](#dataset)
-- [Note on commercial uses:](#note-on-commercial-uses-)
+- [Note on commercial uses](#note-on-commercial-uses)
 - [Benchmark](#benchmark)
 - [References](#references)
 - [Citation](#citation)
@@ -203,7 +203,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - [Update] In the stable release I am using sources 1, 2 and 4 listed above. (The model in the above table with v1 suffix)
 
 
-## Note on commercial uses:
+## Note on commercial uses
 - The pre-release is **NOT** open for any form of commercial usage.
 
 ## Benchmark
