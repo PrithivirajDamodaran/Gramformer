@@ -199,9 +199,8 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - Second and possibly [very complicated and $$$ way to get some 200M synthetic sentences](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction). This is based on the last paper under references section. Not recommended but by all means knock yourself out if you are interested :-) (Update: I got my hands on all the 200M of them)
 - Third source is to repurpose the [GEC Task data](https://www.cl.cam.ac.uk/research/nl/bea2019st/) 
 - Fourth source is from the paper "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
-- I combined sources 1 and 3 to get my training data. NOTE: On the 3rd source I used ONLY W&I+LOCNESS from [Huggingface](https://huggingface.co/datasets/wi_locness)  this is for the beta/pre-release.
-- I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records for beta / pre-release.
-- [Update] In the stable release I am using sources 1,2 and 4 listed above. (The model in the above table with v1 suffix)
+- For the beta / pre-release experiments, I combined 1st source and from the 3rd source I used the W&I+LOCNESS from [Huggingface dataset](https://huggingface.co/datasets/wi_locness) for the training data. I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records.
+- [Update] In the stable release I am using sources 1, 2 and 4 listed above. (The model in the above table with v1 suffix)
 
 
 ## Note on commercial uses:
