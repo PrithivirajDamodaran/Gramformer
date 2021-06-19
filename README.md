@@ -198,8 +198,8 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - Third source is to repurpose the [GEC Task data](https://www.cl.cam.ac.uk/research/nl/bea2019st/) 
 - Fourth source is from the  "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
 - I combined sources 1 and 3 to get my training data. NOTE: On the 3rd source I used ONLY W&I+LOCNESS v2.1, this for the beta/pre-release.
-- I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records for prerelease.
-- [Update] In the stable release, I am using ONLY sources 1 and 2 listed above. 
+- I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records for beta / pre-release.
+- [Update 18-JUNE-2021] In the stable release, I am using ONLY sources 1 and 2 listed above. 
 - Trained on a Tesla T4 GPU and it took ~12 hours to train each of the above models with batch_size = 8 and epochs = 3. 
 
 ## Benchmark
