@@ -194,14 +194,15 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 
 ## Dataset
 - First idea is to generate the dataset using the techniques mentioned in the first paper highlighted in reference section. You can use the technique on anyone of the publicy available [wikipedia edits datasets](https://snap.stanford.edu/data/wiki-meta.html#:~:text=Dataset%20information,Parsed%20Wikipedia%20edit%20history). Write some rules to filter only the grammatical edits, do some cleanup and thats it Bob's your uncle :-).
-- Second and possibly [very complicated and $$$ way to get some 200M synthetic sentences](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction). This is based on the last paper under references section. Not recommended but by all means knock yourself out if you are interested :-)
-- Third source is to repurpose the [GEC Task data](https://www.cl.cam.ac.uk/research/nl/bea2019st/)
-- I combined sources 1 and 3 to get my training data (still working on source 2, will keep you posted)
+- Second and possibly [very complicated and $$$ way to get some 200M synthetic sentences](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction). This is based on the last paper under references section. Not recommended but by all means knock yourself out if you are interested :-) (Update: I got my hands on all the 200M of them)
+- Third source is to repurpose the [GEC Task data](https://www.cl.cam.ac.uk/research/nl/bea2019st/) 
+- Fourth source is from the  "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
+- I combined sources 1 and 3 to get my training data. NOTE: On the 3rd source I used ONLY W&I+LOCNESS v2.1
 - I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records.
-- Trained on a Tesla T4 GPU and it took ~12 hours to train each of the above models with batch_size = 8 and epochs = 3.(Will share training args shortly)
+- Trained on a Tesla T4 GPU and it took ~12 hours to train each of the above models with batch_size = 8 and epochs = 3. 
 
 ## Benchmark
-TBD (I will benchmark grammformer models against the following publicy available models: [salesken/grammar_correction](https://huggingface.co/salesken/grammar_correction) and [flexudy/t5-small-wav2vec2-grammar-fixer](flexudy/t5-small-wav2vec2-grammar-fixer) shortly.
+TBD (I will benchmark grammformer models against the following publicy available models: [salesken/grammar_correction](https://huggingface.co/salesken/grammar_correction), [Grammarly GECTOR](https://github.com/grammarly/gector) and [flexudy/t5-small-wav2vec2-grammar-fixer](flexudy/t5-small-wav2vec2-grammar-fixer) shortly.
 
 
 ## References
