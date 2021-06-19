@@ -200,7 +200,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - Third source is to repurpose the [GEC Task data](https://www.cl.cam.ac.uk/research/nl/bea2019st/) 
 - Fourth source is from the paper "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
 - For the beta / pre-release experiments, I combined 1st source and from the 3rd source I used the W&I+LOCNESS from [Huggingface dataset](https://huggingface.co/datasets/wi_locness) for the training data. I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records.
-- [Update] In the stable release I am using sources 1, 2 and 4 listed above. (The model in the above table with v1 as suffix)
+- [Update] In the stable release I am using slices of data from sources 1, 2 and 4 listed above. (The model in the above table with v1 as suffix)
 
 
 ## Note on commercial uses
