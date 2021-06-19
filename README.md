@@ -204,7 +204,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 
 
 ## Note on commercial uses
-- The pre-release package (and the model) should **NOT** be part of any commercial usage.
+- The pre-release package (and the model) is **NOT** intended for any commercial usage.
 
 ## Benchmark
 TBD (I will benchmark grammformer models against the following publicy available models: [salesken/grammar_correction](https://huggingface.co/salesken/grammar_correction), [Grammarly GECTOR](https://github.com/grammarly/gector) and [flexudy/t5-small-wav2vec2-grammar-fixer](flexudy/t5-small-wav2vec2-grammar-fixer) shortly.
