@@ -190,6 +190,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 |prithivida/grammar_error_detector |Classifier |Label                             |TBD (prithivida/parrot_fluency_on_BERT can be repurposed here, but I would recommend you wait :-))|
 |prithivida/grammar_error_highlighter|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |Beta |
 |[prithivida/grammar_error_correcter](https://huggingface.co/prithivida/grammar_error_correcter)  |Seq2Seq    |The corrected sentence              |Beta|
+|[prithivida/grammar_error_correcter](https://huggingface.co/prithivida/grammar_error_correcter_v1)  |Seq2Seq    |The corrected sentence              |Stable|
 
 
 ## Dataset
