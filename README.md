@@ -195,7 +195,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 
 
 ## Dataset
-- First idea is to generate the dataset using the techniques mentioned in the first paper highlighted in reference section. You can use the technique on anyone of the publicy available [wikipedia edits datasets](https://github.com/google-research-datasets/wiki-atomic-edits). Write some rules to filter only the grammatical edits, do some cleanup and thats it Bob's your uncle :-).
+- First idea is to generate the dataset using the techniques mentioned in the first paper highlighted in reference section. You can use the technique on anyone of the publicy available [wikipedia edits datasets](https://github.com/snukky/wikiedits#wiked-error-corpus). Write some rules to filter only the grammatical edits, do some cleanup and thats it Bob's your uncle :-).
 - Second and possibly [very complicated and $$$ way to get some 200M synthetic sentences](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction). This is based on the last paper under references section. Not recommended but by all means knock yourself out if you are interested :-) (Update: I got my hands on all the 200M of them)
 - Third source is to repurpose the [GEC Task data](https://www.cl.cam.ac.uk/research/nl/bea2019st/) 
 - Fourth source is from the paper "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
