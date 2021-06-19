@@ -202,7 +202,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - [Update] In the stable release I am using sources 1,2 and 4 listed above. 
 - Trained on a Tesla T4 GPU and it took ~12 hours to train each of the above models with batch_size = 8 and epochs = 3. 
 
-## Note for any commercial uses:
+## Note on commercial uses:
 - The pre-release is **NOT** open for any form of commercial usage.
 
 ## Benchmark
