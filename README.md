@@ -201,7 +201,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - I combined sources 1 and 3 to get my training data. NOTE: On the 3rd source I used ONLY W&I+LOCNESS from [Hugginface](https://huggingface.co/datasets/wi_locness)  this is for the beta/pre-release.
 - I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records for beta / pre-release.
 - [Update] In the stable release I am using sources 1,2 and 4 listed above. 
-- Trained on a Tesla T4 GPU and it took ~12 hours to train each of the above models with batch_size = 8 and epochs = 3. 
+
 
 ## Note on commercial uses:
 - The pre-release is **NOT** open for any form of commercial usage.
