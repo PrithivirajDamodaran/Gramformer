@@ -188,7 +188,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 
 |      Model          |Type                          |Return                         |status|
 |----------------|-------------------------------|-----------------------------|-----------------------------|
-|prithivida/grammar_error_detector |Classifier |Label                             |WIP (prithivida/parrot_fluency_on_BERT can be repurposed here, but I would recommend you wait :-))|
+|prithivida/grammar_error_detector |Classifier |Label                             |WIP (Reuse prithivida/parrot_fluency_on_BERT ? but I would'd say you wait :-))|
 |prithivida/grammar_error_highlighter|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |WIP |
 |[prithivida/grammar_error_correcter](https://huggingface.co/prithivida/grammar_error_correcter)  |Seq2Seq    |The corrected sentence              |Beta / Pre-release|
 |[prithivida/grammar_error_correcter_v1](https://huggingface.co/prithivida/grammar_error_correcter_v1)  |Seq2Seq    |The corrected sentence              |Stable|
