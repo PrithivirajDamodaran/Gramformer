@@ -199,8 +199,9 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - Second and possibly [very complicated and $$$ way to get some 200M synthetic sentences](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction). This is based on the last paper under references section. Not recommended but by all means knock yourself out if you are interested :-) (Update: I got my hands on all the 200M of them)
 - Third source is to repurpose the [GEC Task data](https://www.cl.cam.ac.uk/research/nl/bea2019st/) 
 - Fourth source is from the paper "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
-- For the beta / pre-release experiments, I combined 1st source and from the 3rd source I used the W&I+LOCNESS from [Huggingface dataset](https://huggingface.co/datasets/wi_locness) for the training data. I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records.
-- [Update] In the stable release I am using slices of data from sources 1, 2 and 4 listed above. (The model in the above table with v1 as suffix)
+- For the beta / pre-release experiments, I combined 1st source and from the 3rd source I used the W&I+LOCNESS from [Huggingface dataset](https://huggingface.co/datasets/wi_locness) to extract the training data. The 3rd source W&I+LOCNESS was ONLY used different harvest patterns of grammar errors to filter sentence pairs with grammatical errors from WikiEd corpus i.e source 1. W&I+LOCNESS was NOT directly used in training a model.
+- I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records.
+- [Update] In the stable release I am using slices of data from sources 1, 2 and 4 listed above. Because sources 2 and 4 have large volume/variety and doesn't need expensive filtering process like in the case of source 1. (The model in the above table with v1 as suffix)
 
 
 ## Note on commercial uses and release versions
