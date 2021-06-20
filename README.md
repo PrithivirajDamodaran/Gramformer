@@ -201,7 +201,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - Fourth source is from the paper "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
 - For the beta / pre-release experiments, I generated error edit pairs from 1st source and on top of that used W&I+LOCNESS from the 3rd source to filter the pairs with grammatical edits only. W&I+LOCNESS was used to harvest different patterns of grammar errors and is available as a [Huggingface dataset](https://huggingface.co/datasets/wi_locness).
 - I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records.
-- [Update] In the stable release I am using slices of data from sources 1, 2 and 4 listed above. Because sources 2 and 4 have large volume/variety and doesn't need expensive filtering process like in the case of source 1. (The model in the above table with v1 as suffix)
+- [Update] In the stable release I am using slices of data from sources 1, 2 and 4 listed above. Because sources 2 and 4 have large volume/variety and doesn't need expensive filtering process like in the case of source 1. (The stable model is the one in the above table with a suffix v1). In the stable release the edit pairs from source 1 are filtered using the POS tag disagreement techniques mentioned in the last paper in reference.
 
 
 ## Note on commercial uses and release versions
@@ -218,6 +218,7 @@ TBD (I will benchmark grammformer models against the following publicy available
 - [Improving Grammatical Error Correction Models with Purpose-Built Adversarial Examples](https://www.aclweb.org/anthology/2020.emnlp-main.228.pdf) 
 - [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](https://aaai.org/ojs/index.php/AAAI/article/view/5476#:~:text=By%20adding%20random%20masks%20to,correction%20model%20without%20additional%20data.) 
 - [Synthetic Data Generation for Grammatical Error Correction with Tagged Corruption Models](https://www.aclweb.org/anthology/2021.bea-1.4/)
+- [Grammatical Error Detection and Correction Using Tagger Disagreement](https://www.aclweb.org/anthology/W14-1706.pdf)
 
 ## Citation
 TBD
