@@ -202,7 +202,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - For the beta / pre-release experiments, I generated error edit pairs from 1st source and on top of that used W&I+LOCNESS from the 3rd source to filter the pairs with grammatical edits only. W&I+LOCNESS was used to harvest different patterns of grammar errors and is available as a [Huggingface dataset](https://huggingface.co/datasets/wi_locness).
 - I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records.
 - [Update] In the stable release I am using slices of data from sources 1, 2 and 4 listed above. Because sources 2 and 4 have large volume/variety and doesn't need expensive filtering process like in the case of source 1. (The stable model is the one in the above table with a suffix v1). 
-- In the stable release the wiki edit pairs from source 1 are filtered using the [ERRANT tool](https://github.com/chrisjbryant/errant). The source sentences that yielded a **noop?** on the ERRANT output i.e. the m2 format are filtered out.
+- In the stable release the wiki edit pairs from source 1 are filtered using the [ERRANT tool](https://github.com/chrisjbryant/errant). The source sentences that yielded a **noop** on the ERRANT output i.e. the m2 format are filtered out.
 
 
 ## Note on commercial uses and release versions
