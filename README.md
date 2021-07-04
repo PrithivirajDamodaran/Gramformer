@@ -176,7 +176,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 |      Model          |Type                          |Return                         |status|
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |prithivida/grammar_error_detector |Classifier |Label                             |WIP (Reuse prithivida/parrot_fluency_on_BERT ? but I would'd say you wait :-))|
-|<s>prithivida/grammar_error_highlighter</s>|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |<s>WIP</s> Turns out there no need for a model  |
+|<s>prithivida/grammar_error_highlighter</s>|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |<s>WIP</s> Turns out there is no need for a model  |
 |[<s>prithivida/grammar_error_correcter</s>](https://huggingface.co/prithivida/grammar_error_correcter)|Seq2Seq    |The corrected sentence              |Beta / Pre-release (**Not available anymore**)|
 |[prithivida/grammar_error_correcter_v1](https://huggingface.co/prithivida/grammar_error_correcter_v1)  |Seq2Seq    |The corrected sentence              |Stable|
 
