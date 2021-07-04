@@ -132,15 +132,45 @@ corrected_sentence = gf.correct(<your input sentence>, filter_by_quality=True, m
 </s>  
 
 
-### Get Edits - [Coming soon !]
+### Get Edits - [Available now]
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 1, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-edits = gf.get_edits("Norton like to fishing ")
+    
+rows = [ "He are moving here.",
+    "the collection of letters was original used by the ancient Romans",
+    "We enjoys horror movies",
+    "Anna and Mike is going skiing",
+    "I will eat fish for dinner and drank milk",
+    "what be the reason for everyone leave the company",
+    ]   
+
+for row in rows:
+  corrected_sentences = gf.get_edits(row)
+  print("[Input] ", row)
+  print("[Edits] ",corrected_sentences)
+  print("-" *100)
 ```
 
 ```
-[('OTHER', 'like', 1, 2, 'likes', 1, 2), ('PREP', 'to', 2, 3, '', 2, 2), ('PUNCT', '', 4, 4, '.', 3, 4)]
+[Input]  He are moving here.
+[Edits]  [('VERB:SVA', 'are', 1, 2, 'is', 1, 2)]
+----------------------------------------------------------------------------------------------------
+[Input]  the collection of letters was original used by the ancient Romans
+[Edits]  [('MORPH', 'original', 5, 6, 'originally', 5, 6), ('NOUN', 'Romans', 10, 11, 'Romans.', 10, 11)]
+----------------------------------------------------------------------------------------------------
+[Input]  We enjoys horror movies
+[Edits]  [('VERB:SVA', 'enjoys', 1, 2, 'enjoy', 1, 2), ('NOUN', 'movies', 3, 4, 'movies.', 3, 4)]
+----------------------------------------------------------------------------------------------------
+[Input]  Anna and Mike is going skiing
+[Edits]  [('VERB:SVA', 'is', 3, 4, 'are', 3, 4), ('OTHER', 'skiing', 5, 6, 'skiing.', 5, 6)]
+----------------------------------------------------------------------------------------------------
+[Input]  I will eat fish for dinner and drank milk
+[Edits]  [('MORPH', 'drank', 7, 8, 'drink', 7, 8), ('NOUN', 'milk', 8, 9, 'milk.', 8, 9)]
+----------------------------------------------------------------------------------------------------
+[Input]  what be the reason for everyone leave the company
+[Edits]  [('VERB:SVA', 'be', 1, 2, 'is', 1, 2), ('VERB:FORM', '', 6, 6, 'to', 6, 7), ('NOUN', 'company', 8, 9, 'company?', 9, 10)]
+----------------------------------------------------------------------------------------------------
 ```
 
 
