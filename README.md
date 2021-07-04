@@ -14,8 +14,8 @@ Human and machine generated text often suffer from grammatical and/or typographi
 - [Quick Start](#quick-start)
   * [Correcter - [Available now]](#correcter----available-now-)
   * [Challenge with generative models](#challenge-with-generative-models)
-  * [Correcter with QE estimator - [Coming soon !]](#correcter-with-qe-estimator----coming-soon---)
-  * [Get Edits - [Coming soon !]](#get-edits----coming-soon---)
+  * [Correcter with QE estimator - [Available now]](#correcter-with-qe-estimator----available-now-)
+  * [Get Edits - [Available now]](#get-edits----available-now-)
   * [Highlighter - [Coming soon !]](#highlighter----coming-soon---)
   * [Detector - [Coming soon !]](#detector----coming-soon---)
 - [Models](#models)
@@ -23,8 +23,7 @@ Human and machine generated text often suffer from grammatical and/or typographi
 - [Note on commercial uses and release versions](#note-on-commercial-uses-and-release-versions)
 - [Benchmark](#benchmark)
 - [References](#references)
-- [Citation](#citation)
-
+- [How to cite Gramformer?](#how-to-cite-gramformer-)
 
 ## Usecases for Gramformer
 
