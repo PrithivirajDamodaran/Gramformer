@@ -28,7 +28,7 @@ class Gramformer:
         print("[Gramformer] All models loaded..")    
     
 
-  def correct(self, input_sentence, max_candidates=3):
+  def correct(self, input_sentence, max_candidates=5):
       correction_prefix = "gec: "
       input_sentence = correction_prefix + input_sentence
       input_ids = self.correction_tokenizer.encode(input_sentence, return_tensors='pt')
