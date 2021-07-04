@@ -130,12 +130,15 @@ for influent_sentence in influent_sentences:
 While Gramformer aims to post-process outputs from the generative models, Gramformer itself is a generative model. So the question arises, who will post-process the Gramformer outputs ? (I know, very meta :-)). In general all generative models have the tendency to generate spurious text sometimes, which we cannot control. So to make sure the gramformer grammar corrections (and highlights) are as accurate as possible, A quality estimator (QE) will be added. It can estimate a error correction quality score and use that as a filter on Top-N candidates to return only the best based on the score.
 
 ### Correcter with QE estimator - [Available now]
-<s> ```python
+Update: QE estimator is now built, gf.correct itself generates top N candidates, scores, ranks and returns the top ranked result.    
+<s> 
+```python 
 from gramformer import Gramformer
 gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
 corrected_sentence = gf.correct(<your input sentence>, filter_by_quality=True, max_candidates=3) 
-```</s>
-QE estimator is now built, gf.correct itself generates top N candidates, scores, ranks and returns the top ranked result.    
+```
+</s>  
+
 
 ### Get Edits - [Coming soon !]
 ```python
