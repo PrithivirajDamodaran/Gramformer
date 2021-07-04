@@ -48,7 +48,7 @@ class Gramformer:
         corrected.append(self.correction_tokenizer.decode(pred, skip_special_tokens=True).strip())
 
       scores = self.scorer.sentence_score(corrected, log=True)
-      ranked_corrected = [(c,s) for i, s in zip(corrected, scores)]
+      ranked_corrected = [(c,s) for c, s in zip(corrected, scores)]
       ranked_corrected.sort(key = lambda x:x[1], reverse=True)
       return ranked_corrected[0][0]
 
@@ -99,7 +99,7 @@ class Gramformer:
             corrected.append(self.correction_tokenizer.decode(pred, skip_special_tokens=True).strip())
 
         scores = self.scorer.sentence_score(corrected, log=True)
-        ranked_corrected = [(c,s) for i, s in zip(corrected, scores)]
+        ranked_corrected = [(c,s) for c, s in zip(corrected, scores)]
         ranked_corrected.sort(key = lambda x:x[1], reverse=True)
 
         orig = input_sentence[5:].strip()
