@@ -82,26 +82,41 @@ gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=correc
 
 influent_sentences = [
     "He are moving here.",
+    "I am doing fine. How is you?",
+    " How is they?",
+    "Matt like fish",
     "the collection of letters was original used by the ancient Romans",
     "We enjoys horror movies",
     "Anna and Mike is going skiing",
+    "I walk to the store and I bought milk",
+    " We all eat the fish and then made dessert",
     "I will eat fish for dinner and drink milk",
     "what be the reason for everyone leave the company",
 ]   
 
 for influent_sentence in influent_sentences:
-    corrected_sentence = gf.correct(influent_sentence)
+    corrected_sentences = gf.correct(influent_sentence, max_candidates=1)
     print("[Input] ", influent_sentence)
-    print("[Correction] ",corrected_sentence[0])
+    for corrected_sentence in corrected_sentences:
+        print("[Correction] ",corrected_sentence[0])
     print("-" *100)
 ```
 
 ```text
-[Input]  He are moving here.
+[Input]  He are moving here
 [Correction]  He is moving here.
 ----------------------------------------------------------------------------------------------------
+[Input]  I am doing fine. How is you?
+[Correction]  I am doing fine, how are you?
+----------------------------------------------------------------------------------------------------
+[Input]  How is they?
+[Correction]  How does it work?
+----------------------------------------------------------------------------------------------------
+[Input]  Matt like fish
+[Correction]  Matt likes fish.
+----------------------------------------------------------------------------------------------------
 [Input]  the collection of letters was original used by the ancient Romans
-[Correction]  the collection of letters was originally used by the ancient Romans.
+[Correction]  The collection of letters was originally used by the ancient Romans
 ----------------------------------------------------------------------------------------------------
 [Input]  We enjoys horror movies
 [Correction]  We enjoy horror movies.
@@ -109,8 +124,14 @@ for influent_sentence in influent_sentences:
 [Input]  Anna and Mike is going skiing
 [Correction]  Anna and Mike are going skiing.
 ----------------------------------------------------------------------------------------------------
+[Input]  I walk to the store and I bought milk
+[Correction]  I went to the store and I bought milk.
+----------------------------------------------------------------------------------------------------
+[Input]  We all eat the fish and then made dessert
+[Correction]  We all ate the fish and then made dessert.
+----------------------------------------------------------------------------------------------------
 [Input]  I will eat fish for dinner and drank milk
-[Correction]  I will eat fish for dinner and drink milk.
+[Correction]  I ate fish for dinner and drank milk.
 ----------------------------------------------------------------------------------------------------
 [Input]  what be the reason for everyone leave the company
 [Correction]  what is the reason for everyone leaving the company?
