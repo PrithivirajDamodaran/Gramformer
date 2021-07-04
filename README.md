@@ -82,12 +82,10 @@ set_seed(1212)
 gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
 
 influent_sentences = [
-    "Matt like fish",
+    "He are moving here.",
     "the collection of letters was original used by the ancient Romans",
     "We enjoys horror movies",
     "Anna and Mike is going skiing",
-    "I walk to the store and I bought milk",
-    "We all eat the fish and then made dessert",
     "I will eat fish for dinner and drank milk",
     "what be the reason for everyone leave the company",
 ]   
@@ -100,29 +98,23 @@ for influent_sentence in influent_sentences:
 ```
 
 ```text
-[Input]  Matt like fish
-[Correction]  Matt likes fish
+[Input]  He are moving here.
+[Correction]  He is moving here.
 ----------------------------------------------------------------------------------------------------
 [Input]  the collection of letters was original used by the ancient Romans
-[Correction]  The collection of letters was originally used by the ancient Romans.
+[Correction]  the collection of letters was originally used by the ancient Romans
 ----------------------------------------------------------------------------------------------------
 [Input]  We enjoys horror movies
-[Correction]  We enjoy horror movies
+[Correction]  We enjoy horror movies.
 ----------------------------------------------------------------------------------------------------
 [Input]  Anna and Mike is going skiing
-[Correction]  Anna and Mike are going skiing
-----------------------------------------------------------------------------------------------------
-[Input]  I walk to the store and I bought milk
-[Correction]  I walked to the store and bought milk.
-----------------------------------------------------------------------------------------------------
-[Input]  We all eat the fish and then made dessert
-[Correction]  We all ate the fish and then made dessert
+[Correction]  Anna and Mike are going skiing.
 ----------------------------------------------------------------------------------------------------
 [Input]  I will eat fish for dinner and drank milk
-[Correction]  I'll eat fish for dinner and drink milk.
+[Correction]  I will eat fish for dinner and drink milk.
 ----------------------------------------------------------------------------------------------------
 [Input]  what be the reason for everyone leave the company
-[Correction]  what can be the reason for everyone to leave the company.
+[Correction]  what is the reason for everyone to leave the company
 ----------------------------------------------------------------------------------------------------
 ```
 
