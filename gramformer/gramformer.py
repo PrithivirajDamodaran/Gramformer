@@ -28,7 +28,7 @@ class Gramformer:
         print("[Gramformer] All models loaded..")    
     
 
-  def correct(self, input_sentence, max_candidates=5):
+  def correct(self, input_sentence, max_candidates=3):
       correction_prefix = "gec: "
       input_sentence = correction_prefix + input_sentence
       input_ids = self.correction_tokenizer.encode(input_sentence, return_tensors='pt')
@@ -104,7 +104,7 @@ class Gramformer:
 
         orig = input_sentence[5:].strip()
         cor  = ranked_corrected[0][0]   
-        edits = _get_edits(orig, cor)
+        edits = self._get_edits(orig, cor)
 
         return edits
         
