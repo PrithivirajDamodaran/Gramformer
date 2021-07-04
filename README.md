@@ -102,16 +102,16 @@ for influent_sentence in influent_sentences:
 [Correction]  He is moving here.
 ----------------------------------------------------------------------------------------------------
 [Input]  the collection of letters was original used by the ancient Romans
-[Correction]  the collection of letters originally used by the ancient Romans.
+[Correction]  the collection of letters was originally used by the ancient Romans.
 ----------------------------------------------------------------------------------------------------
 [Input]  We enjoys horror movies
 [Correction]  We enjoy horror movies.
 ----------------------------------------------------------------------------------------------------
 [Input]  Anna and Mike is going skiing
-[Correction]  Anna and Mike are skiing.
+[Correction]  Anna and Mike are going skiing.
 ----------------------------------------------------------------------------------------------------
 [Input]  I will eat fish for dinner and drank milk
-[Correction]  I will eat fish for dinner and drank milk.
+[Correction]  I will eat fish for dinner and drink milk.
 ----------------------------------------------------------------------------------------------------
 [Input]  what be the reason for everyone leave the company
 [Correction]  what is the reason for everyone leaving the company?
