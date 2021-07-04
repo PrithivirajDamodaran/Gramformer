@@ -50,7 +50,7 @@ class Gramformer:
       scores = self.scorer.sentence_score(corrected, log=True)
       ranked_corrected = [(c,s) for c, s in zip(corrected, scores)]
       ranked_corrected.sort(key = lambda x:x[1], reverse=True)
-      return ranked_corrected[0][0]
+      return ranked_corrected
 
   def highlight(self, input_sentence):
      # TO BE IMPLEMENTED
