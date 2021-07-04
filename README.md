@@ -62,7 +62,7 @@ As of today grammatical safety nets for authoring social contents (Post or Comme
 
 ## Installation
 ```python
-pip install -U --use-deprecated=legacy-resolver git+https://github.com/PrithivirajDamodaran/Gramformer.git
+pip3 install -U git+https://github.com/PrithivirajDamodaran/Gramformer.git
 ```
 ## Quick Start
 
