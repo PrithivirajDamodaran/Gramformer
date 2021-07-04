@@ -77,7 +77,7 @@ def _get_edits(self, orig, cor):
 
 
 def get_edits(self, input_sentence):
-     correction_prefix = "gec: "
+      correction_prefix = "gec: "
       input_sentence = correction_prefix + input_sentence
       input_ids = self.correction_tokenizer.encode(input_sentence, return_tensors='pt')
       input_ids = input_ids.to(self.device)
