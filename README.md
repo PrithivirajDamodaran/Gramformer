@@ -62,7 +62,7 @@ As of today grammatical safety nets for authoring social contents (Post or Comme
 
 ## Installation
 ```python
-pip install git+https://github.com/PrithivirajDamodaran/Gramformer.git
+pip3 install -U git+https://github.com/PrithivirajDamodaran/Gramformer.git
 ```
 ## Quick Start
 
@@ -82,13 +82,11 @@ set_seed(1212)
 gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
 
 influent_sentences = [
-    "Matt like fish",
+    "He are moving here.",
     "the collection of letters was original used by the ancient Romans",
     "We enjoys horror movies",
     "Anna and Mike is going skiing",
-    "I walk to the store and I bought milk",
-    "We all eat the fish and then made dessert",
-    "I will eat fish for dinner and drank milk",
+    "I will eat fish for dinner and drink milk",
     "what be the reason for everyone leave the company",
 ]   
 
@@ -100,41 +98,39 @@ for influent_sentence in influent_sentences:
 ```
 
 ```text
-[Input]  Matt like fish
-[Correction]  Matt likes fish
+[Input]  He are moving here.
+[Correction]  He is moving here.
 ----------------------------------------------------------------------------------------------------
 [Input]  the collection of letters was original used by the ancient Romans
-[Correction]  The collection of letters was originally used by the ancient Romans.
+[Correction]  the collection of letters was originally used by the ancient Romans.
 ----------------------------------------------------------------------------------------------------
 [Input]  We enjoys horror movies
-[Correction]  We enjoy horror movies
+[Correction]  We enjoy horror movies.
 ----------------------------------------------------------------------------------------------------
 [Input]  Anna and Mike is going skiing
-[Correction]  Anna and Mike are going skiing
-----------------------------------------------------------------------------------------------------
-[Input]  I walk to the store and I bought milk
-[Correction]  I walked to the store and bought milk.
-----------------------------------------------------------------------------------------------------
-[Input]  We all eat the fish and then made dessert
-[Correction]  We all ate the fish and then made dessert
+[Correction]  Anna and Mike are going skiing.
 ----------------------------------------------------------------------------------------------------
 [Input]  I will eat fish for dinner and drank milk
-[Correction]  I'll eat fish for dinner and drink milk.
+[Correction]  I will eat fish for dinner and drink milk.
 ----------------------------------------------------------------------------------------------------
 [Input]  what be the reason for everyone leave the company
-[Correction]  what can be the reason for everyone to leave the company.
+[Correction]  what is the reason for everyone leaving the company?
 ----------------------------------------------------------------------------------------------------
 ```
 
 ### Challenge with generative models
 While Gramformer aims to post-process outputs from the generative models, Gramformer itself is a generative model. So the question arises, who will post-process the Gramformer outputs ? (I know, very meta :-)). In general all generative models have the tendency to generate spurious text sometimes, which we cannot control. So to make sure the gramformer grammar corrections (and highlights) are as accurate as possible, A quality estimator (QE) will be added. It can estimate a error correction quality score and use that as a filter on Top-N candidates to return only the best based on the score.
 
-### Correcter with QE estimator - [Coming soon !]
-```python
+### Correcter with QE estimator - [Available now]
+Update: QE estimator is now built-in, gf.correct itself generates top N candidates, scores, ranks and returns the top ranked result.    
+<s> 
+```python 
 from gramformer import Gramformer
 gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-corrected_sentence = gf.correct(<your input sentence>, filter_by_quality=True, max_candidates=3)
+corrected_sentence = gf.correct(<your input sentence>, filter_by_quality=True, max_candidates=3) 
 ```
+</s>  
+
 
 ### Get Edits - [Coming soon !]
 ```python
@@ -172,7 +168,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 |      Model          |Type                          |Return                         |status|
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |prithivida/grammar_error_detector |Classifier |Label                             |WIP (Reuse prithivida/parrot_fluency_on_BERT ? but I would'd say you wait :-))|
-|<s>prithivida/grammar_error_highlighter</s>|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |<s>WIP</s> Turns out there no need for a model  |
+|<s>prithivida/grammar_error_highlighter</s>|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |<s>WIP</s> Turns out there is no need for a model  |
 |[<s>prithivida/grammar_error_correcter</s>](https://huggingface.co/prithivida/grammar_error_correcter)|Seq2Seq    |The corrected sentence              |Beta / Pre-release (**Not available anymore**)|
 |[prithivida/grammar_error_correcter_v1](https://huggingface.co/prithivida/grammar_error_correcter_v1)  |Seq2Seq    |The corrected sentence              |Stable|
 
