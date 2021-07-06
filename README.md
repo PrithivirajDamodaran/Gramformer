@@ -83,7 +83,7 @@ gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=correc
 influent_sentences = [
     "He are moving here.",
     "I am doing fine. How is you?",
-    " How is they?",
+    "How is they?",
     "Matt like fish",
     "the collection of letters was original used by the ancient Romans",
     "We enjoys horror movies",
@@ -110,7 +110,7 @@ for influent_sentence in influent_sentences:
 [Correction]  I am doing fine, how are you?
 ----------------------------------------------------------------------------------------------------
 [Input]  How is they?
-[Correction]  How does it work?
+[Correction]  How are they?
 ----------------------------------------------------------------------------------------------------
 [Input]  Matt like fish
 [Correction]  Matt likes fish.
