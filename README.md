@@ -6,24 +6,24 @@
 </p>
 
 # Gramformer
-Human and machine generated text often suffer from grammatical and/or typographical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight and correct** grammar errors. To make sure the corrections and highlights recommended are of high quality, it comes with a quality estimator. You can use Gramformer in one or more areas mentioned under the "use-cases" section below or any other usecase as you see fit. Gramformer stands on the shoulders of giants, it combines some of the top notch researches in grammar correction. *Note: It works at **sentence levels** and has been trained on <s>128</s> 64 length sentences, so not (yet) suitable for long prose or paragraphs (stay tuned for upcoming releases)*
+Human and machine generated text often suffer from grammatical and/or typographical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to **detect, highlight and correct** grammar errors. To make sure the corrections and highlights recommended are of high quality, it comes with a quality estimator. You can use Gramformer in one or more areas mentioned under the "use-cases" section below or any other usecase as you see fit. Gramformer stands on the shoulders of giants, it combines some of the top notch researches in grammar correction. *Note: It works at **sentence levels** and has been trained on 64 length sentences, so not (yet) suitable for long prose or paragraphs (stay tuned for upcoming releases)*
 
 ## Table of contents
 - [Usecases for Gramformer](#usecases-for-gramformer)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
-  * [Correcter - [Available now]](#correcter----available-now-)
+  * [Correcter - Available now](#correcter---available-now)
   * [Challenge with generative models](#challenge-with-generative-models)
-  * [Correcter with QE estimator - [Available now]](#correcter-with-qe-estimator----available-now-)
-  * [Get Edits - [Available now]](#get-edits----available-now-)
-  * [Highlighter - [Coming soon !]](#highlighter----coming-soon---)
-  * [Detector - [Coming soon !]](#detector----coming-soon---)
+  * [Correcter with QE estimator - Available now](#correcter-with-qe-estimator---available-now)
+  * [Get Edits - Available now](#get-edits---available-now)
+  * [Highlighter - Available now](#highlighter---available-now)
+  * [Detector - Coming soon](#detector---coming-soon)
 - [Models](#models)
 - [Dataset](#dataset)
 - [Note on commercial uses and release versions](#note-on-commercial-uses-and-release-versions)
 - [Benchmark](#benchmark)
 - [References](#references)
-- [How to cite Gramformer?](#how-to-cite-gramformer-)
+- [How to cite Gramformer](#how-to-cite-gramformer)
 
 ## Usecases for Gramformer
 
@@ -65,7 +65,7 @@ pip3 install -U git+https://github.com/PrithivirajDamodaran/Gramformer.git
 ```
 ## Quick Start
 
-### Correcter - [Available now]
+### Correcter - Available now
 ```python
 from gramformer import Gramformer
 import torch
@@ -78,7 +78,7 @@ def set_seed(seed):
 set_seed(1212)
 
 
-gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
+gf = Gramformer(models = 1, use_gpu=False) # 1=corrector, 2=detector
 
 influent_sentences = [
     "He are moving here.",
@@ -98,78 +98,74 @@ for influent_sentence in influent_sentences:
     corrected_sentences = gf.correct(influent_sentence, max_candidates=1)
     print("[Input] ", influent_sentence)
     for corrected_sentence in corrected_sentences:
-        print("[Correction] ",corrected_sentence[0])
+      print("[Correction] ",corrected_sentence)
     print("-" *100)
 ```
 
 ```text
-[Input]  He are moving here
-[Correction]  He is moving here.
+[Input]  He are moving here.
+[Correction]  ('He was moving to here.', -36.84136199951172)
 ----------------------------------------------------------------------------------------------------
 [Input]  I am doing fine. How is you?
-[Correction]  I am doing fine, how are you?
+[Correction]  ('I am doing fine. How are you?', -36.7198371887207)
 ----------------------------------------------------------------------------------------------------
 [Input]  How is they?
-[Correction]  How are they?
+[Correction]  ('What are they?', -20.067779541015625)
 ----------------------------------------------------------------------------------------------------
 [Input]  Matt like fish
-[Correction]  Matt likes fish.
+[Correction]  ('Matt likes fish.', -33.768829345703125)
 ----------------------------------------------------------------------------------------------------
 [Input]  the collection of letters was original used by the ancient Romans
-[Correction]  The collection of letters was originally used by the ancient Romans
+[Correction]  ('the collection of letters was originally used by the ancient Romans', -58.805442810058594)
 ----------------------------------------------------------------------------------------------------
 [Input]  We enjoys horror movies
-[Correction]  We enjoy horror movies.
+[Correction]  ('We enjoy horror movies.', -31.77159881591797)
 ----------------------------------------------------------------------------------------------------
 [Input]  Anna and Mike is going skiing
-[Correction]  Anna and Mike are going skiing.
+[Correction]  ('Anna and Mike are going skiing.', -42.5970458984375)
 ----------------------------------------------------------------------------------------------------
 [Input]  I walk to the store and I bought milk
-[Correction]  I went to the store and I bought milk.
+[Correction]  ('I walked to the store and I bought milk.', -46.33577346801758)
 ----------------------------------------------------------------------------------------------------
-[Input]  We all eat the fish and then made dessert
-[Correction]  We all ate the fish and then made dessert.
+[Input]   We all eat the fish and then made dessert
+[Correction]  ('We all ate the fish and then made dessert.', -54.92893981933594)
 ----------------------------------------------------------------------------------------------------
-[Input]  I will eat fish for dinner and drank milk
-[Correction]  I ate fish for dinner and drank milk.
+[Input]  I will eat fish for dinner and drink milk
+[Correction]  ('I eat fish for dinner and drink milk.', -45.26580810546875)
 ----------------------------------------------------------------------------------------------------
 [Input]  what be the reason for everyone leave the company
-[Correction]  what is the reason for everyone leaving the company?
+[Correction]  ('what be the reason for everyone leaving the company?', -52.93060302734375)
 ----------------------------------------------------------------------------------------------------
 ```
 
 ### Challenge with generative models
 While Gramformer aims to post-process outputs from the generative models, Gramformer itself is a generative model. So the question arises, who will post-process the Gramformer outputs ? (I know, very meta :-)). In general all generative models have the tendency to generate spurious text sometimes, which we cannot control. So to make sure the gramformer grammar corrections (and highlights) are as accurate as possible, A quality estimator (QE) will be added. It can estimate a error correction quality score and use that as a filter on Top-N candidates to return only the best based on the score.
 
-### Correcter with QE estimator - [Available now]
-Update: QE estimator is now built-in, gf.correct itself generates top N candidates, scores, ranks and returns the top ranked result.    
-<s> 
-```python 
-from gramformer import Gramformer
-gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-corrected_sentence = gf.correct(<your input sentence>, filter_by_quality=True, max_candidates=3) 
-```
-</s>  
+### Correcter with QE estimator - Available now
+Update: QE estimator is now built-in, gf.correct generates top N candidates, scores, ranks and returns the top ranked result.    
 
+### Get Edits - Available now
+For edit, call ```gf.correct``` and pass original and corrected sentence to ```gf.get_edits``` method.
 
-### Get Edits - [Available now]
 ```python
 from gramformer import Gramformer
-gf = Gramformer(models = 1, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-    
-rows = [ "He are moving here.",
+gf = Gramformer(models = 1, use_gpu=False) # 1=corrector, 2=detector
+
+influent_sentences = [
+    "He are moving here.",
     "the collection of letters was original used by the ancient Romans",
     "We enjoys horror movies",
     "Anna and Mike is going skiing",
     "I will eat fish for dinner and drank milk",
-    "what be the reason for everyone leave the company",
-    ]   
+    "what be the reason for everyone leave the comapny"
+]   
 
-for row in rows:
-  corrected_sentences = gf.get_edits(row)
-  print("[Input] ", row)
-  print("[Edits] ",corrected_sentences)
-  print("-" *100)
+for influent_sentence in influent_sentences:
+    corrected_sentences = gf.correct(influent_sentence, max_candidates=1)
+    print("[Input] ", influent_sentence)
+    for corrected_sentence in corrected_sentences:
+      print("[Edits] ", gf.get_edits(influent_sentence, corrected_sentence[0]))
+    print("-" *100)
 ```
 
 ```
@@ -177,36 +173,68 @@ for row in rows:
 [Edits]  [('VERB:SVA', 'are', 1, 2, 'is', 1, 2)]
 ----------------------------------------------------------------------------------------------------
 [Input]  the collection of letters was original used by the ancient Romans
-[Edits]  [('MORPH', 'original', 5, 6, 'originally', 5, 6), ('NOUN', 'Romans', 10, 11, 'Romans.', 10, 11)]
+[Edits]  [('MORPH', 'original', 5, 6, 'originally', 5, 6)]
 ----------------------------------------------------------------------------------------------------
 [Input]  We enjoys horror movies
 [Edits]  [('VERB:SVA', 'enjoys', 1, 2, 'enjoy', 1, 2), ('NOUN', 'movies', 3, 4, 'movies.', 3, 4)]
 ----------------------------------------------------------------------------------------------------
 [Input]  Anna and Mike is going skiing
-[Edits]  [('VERB:SVA', 'is', 3, 4, 'are', 3, 4), ('OTHER', 'skiing', 5, 6, 'skiing.', 5, 6)]
+[Edits]  [('VERB:SVA', 'is', 3, 4, 'are', 3, 4), ('OTHER', 'skiing', 5, 6, 'skiing!', 5, 6)]
 ----------------------------------------------------------------------------------------------------
 [Input]  I will eat fish for dinner and drank milk
-[Edits]  [('MORPH', 'drank', 7, 8, 'drink', 7, 8), ('NOUN', 'milk', 8, 9, 'milk.', 8, 9)]
+[Edits]  [('VERB:TENSE', 'will eat', 1, 3, 'ate', 1, 2), ('MORPH', 'drank', 7, 8, 'drink', 6, 7), ('NOUN', 'milk', 8, 9, 'milk.', 7, 8)]
 ----------------------------------------------------------------------------------------------------
-[Input]  what be the reason for everyone leave the company
-[Edits]  [('VERB:SVA', 'be', 1, 2, 'is', 1, 2), ('VERB:FORM', '', 6, 6, 'to', 6, 7), ('NOUN', 'company', 8, 9, 'company?', 9, 10)]
+[Input]  what be the reason for everyone leave the comapny
+[Edits]  [('ORTH', 'what', 0, 1, 'What', 0, 1), ('VERB:TENSE', 'be', 1, 2, 'was', 1, 2), ('VERB:FORM', 'leave', 6, 7, 'leaving', 6, 7), ('SPELL', 'comapny', 8, 9, 'company?', 8, 9)]
 ----------------------------------------------------------------------------------------------------
 ```
 
 
-### Highlighter - [Coming soon !]
+### Highlighter - Available now
+For highlight, call ```gf.correct``` and pass original and corrected sentence to ```gf.highlight``` method.
+
 ```python
-from gramformer import Gramformer
-gf = Gramformer(models = 1, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
-highlighted_sentence = gf.highlight(<your input sentence>)
+gf = Gramformer(models = 1, use_gpu=False) # 1=corrector, 2=detector
+
+influent_sentences = [
+    "He are moving here.",
+    "the collection of letters was original used by the ancient Romans",
+    "We enjoys horror movies",
+    "Anna and Mike is going skiing",
+    "I will eat fish for dinner and drank milk",
+    "what be the reason for everyone leave the comapny"
+]   
+
+for influent_sentence in influent_sentences:
+    corrected_sentences = gf.correct(influent_sentence, max_candidates=1)
+    print("[Input] ", influent_sentence)
+    for corrected_sentence in corrected_sentences:
+      print("[Edits] ", gf.highlight(influent_sentence, corrected_sentence[0]))
+    print("-" *100)
 ```
 
 ```text
-[Input]  Norton like fish
-[Highlight] Norton <c type=OTHER edit=likes>like</c> <d type=PREP edit=''>to</d> <a type=PUNCT edit=.>fishing</a>
+[Input]  He are moving here.
+[Edits]  He <c type='VERB:SVA' edit='is'>are</c> moving <c type='NOUN' edit='on.'>here.</c>
+----------------------------------------------------------------------------------------------------
+[Input]  the collection of letters was original used by the ancient Romans
+[Edits]  the collection of letters was <c type='MORPH' edit='originally'>original</c> used by the ancient Romans
+----------------------------------------------------------------------------------------------------
+[Input]  We enjoys horror movies
+[Edits]  We <c type='VERB:SVA' edit='enjoy'>enjoys</c> horror <c type='NOUN' edit='movies.'>movies</c>
+----------------------------------------------------------------------------------------------------
+[Input]  Anna and Mike is going skiing
+[Edits]  Anna and Mike <c type='VERB:SVA' edit='are'>is</c> going <c type='OTHER' edit='skiing.'>skiing</c>
+----------------------------------------------------------------------------------------------------
+[Input]  I will eat fish for dinner and drank milk
+[Edits]  I <c type='VERB:TENSE' edit='ate'>will eat</c> fish for dinner and drank <c type='NOUN' edit='milk.'>milk</c>
+----------------------------------------------------------------------------------------------------
+[Input]  what be the reason for everyone leave the comapny
+[Edits]  what <d type='VERB' edit=''>be</d> the reason for <a type='VERB:FORM' edit='everyone to'>everyone</a> leave the <c type='SPELL' edit='company?'>comapny</c>
+----------------------------------------------------------------------------------------------------
 ```
 
-### Detector - [Coming soon !]
+### Detector - Coming soon
 ```python
 from gramformer import Gramformer
 gf = Gramformer(models = 0, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
@@ -236,7 +264,7 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 
 ## Note on commercial uses and release versions
 - Any releases <= v1.0 is **NOT** intended for any commercial usage.
-- Stable releases > v1.0 <s> and current release is v1.2 </s>
+- Stable releases > v1.0
 
 ## Benchmark
 TBD (I will benchmark grammformer models against the following publicy available models: [salesken/grammar_correction](https://huggingface.co/salesken/grammar_correction), [Grammarly GECTOR](https://github.com/grammarly/gector) and [flexudy/t5-small-wav2vec2-grammar-fixer](flexudy/t5-small-wav2vec2-grammar-fixer) shortly.
@@ -252,7 +280,7 @@ TBD (I will benchmark grammformer models against the following publicy available
 - [Automatic Annotation and Evaluation of Error Types for Grammatical Error Correction](https://aclanthology.org/P17-1074.pdf)
     
 
-## How to cite Gramformer?
+## How to cite Gramformer
 TBD
 
 
