@@ -9,7 +9,7 @@ def set_seed(seed):
 set_seed(1212)
 
 
-gf = Gramformer(models = 2, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
+gf = Gramformer(models = 1, use_gpu=False) # 1=corrector, 2=detector
 
 influent_sentences = [
     "Matt like fish",
@@ -23,7 +23,8 @@ influent_sentences = [
 ]   
 
 for influent_sentence in influent_sentences:
-    corrected_sentence = gf.correct(influent_sentence)
+    corrected_sentences = gf.correct(influent_sentence, max_candidates=1)
     print("[Input] ", influent_sentence)
-    print("[Correction] ",corrected_sentence[0])
+    for corrected_sentence in corrected_sentences:
+      print("[Correction] ",corrected_sentence)
     print("-" *100)
