@@ -254,20 +254,19 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 |      Model          |Type                          |Return                         |status|
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |prithivida/grammar_error_detector |Classifier |Label                             |WIP (Reuse prithivida/parrot_fluency_on_BERT ? but I would'd say you wait :-))|
-|<s>prithivida/grammar_error_highlighter</s>|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |<s>WIP</s> Turns out there is no need for a model  |
+|<s>prithivida/grammar_error_highlighter</s>|Seq2Seq    |Grammar errors enclosed in ``` <e> and </e> ``` |<s>WIP</s> |
 |[<s>prithivida/grammar_error_correcter</s>](https://huggingface.co/prithivida/grammar_error_correcter)|Seq2Seq    |The corrected sentence              |Beta / Pre-release (**Not available anymore**)|
 |[prithivida/grammar_error_correcter_v1](https://huggingface.co/prithivida/grammar_error_correcter_v1)  |Seq2Seq    |The corrected sentence              |Stable|
 
 
 ## Dataset
-- First idea is to generate the dataset using the techniques mentioned in the first paper highlighted in reference section. You can use the technique on anyone of the publicy available [wikipedia edits datasets](https://github.com/snukky/wikiedits). Write some rules to filter only the grammatical edits, do some cleanup and thats it Bob's your uncle :-).
-- Second and possibly [very complicated and $$$ way to get some 200M synthetic sentences](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction). This is based on the last paper under references section. Not recommended but by all means knock yourself out if you are interested :-) (Update: I got my hands on all the 200M of them) - Available under CC-BY-4.0 License 
-- Third source is to repurpose the [GEC Task data](https://www.cl.cam.ac.uk/research/nl/bea2019st/) 
-- Fourth source is from the paper "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019) - Available under  MIT License
-- For the beta / pre-release experiments, I generated error edit pairs from 1st source and on top of that used W&I+LOCNESS from the 3rd source to filter the pairs with grammatical edits only. W&I+LOCNESS was used to harvest different patterns of grammar errors and is available as a [Huggingface dataset](https://huggingface.co/datasets/wi_locness).
-- I ended up with ~1M records and after some heurtistics based filtering amounted to ~1/2M records.
-- [Update] In the stable release I am using slices of data from sources 1, 2 and 4 listed above. Because sources 2 and 4 have large volume/variety and doesn't need expensive filtering process like in the case of source 1. (The stable model is the one in the above table with a suffix v1). 
-- In the stable release the wiki edit pairs from source 1 are filtered using the ERRANT tool. The source sentences that yielded a **noop** on the ERRANT output i.e. the m2 format are filtered out.
+The following techniques were used to generate datasets for fine-tunning the model prithivida/grammar_error_correcter_v1
+- Download, convert and filter WikiEdits
+    - Harvest WikiEdits from a publicly available wikipedia edits [like this](https://github.com/snukky/wikiedits).
+    - Convert WikiText edits to <orig, edit> pairs using a custom script.
+    - Filter out grammatical pairs using a ERRANT based custom script.
+- Download C4 based synthetic pairs available [here](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction).
+- Download PIE synthetic pairs available [here](https://github.com/awasthiabhijeet/PIE).
 
 
 ## Note on commercial uses and release versions
@@ -275,7 +274,10 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 - Stable releases > v1.0
 
 ## Benchmark
-TBD (I will benchmark grammformer models against the following publicy available models: [salesken/grammar_correction](https://huggingface.co/salesken/grammar_correction), [Grammarly GECTOR](https://github.com/grammarly/gector) and [flexudy/t5-small-wav2vec2-grammar-fixer](flexudy/t5-small-wav2vec2-grammar-fixer) shortly.
+TBD (I will benchmark grammformer models against the following publicy available models: 
+- [salesken/grammar_correction](https://huggingface.co/salesken/grammar_correction), 
+- [Grammarly GECTOR](https://github.com/grammarly/gector) 
+- [flexudy/t5-small-wav2vec2-grammar-fixer](flexudy/t5-small-wav2vec2-grammar-fixer) shortly.
 
 ## References
 
