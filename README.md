@@ -149,6 +149,9 @@ For edit, call ```gf.correct``` and pass original and corrected sentence to ```g
 
 ```python
 from gramformer import Gramformer
+
+set_seed(1212)
+
 gf = Gramformer(models = 1, use_gpu=False) # 1=corrector, 2=detector
 
 influent_sentences = [
@@ -194,7 +197,12 @@ for influent_sentence in influent_sentences:
 For highlight, call ```gf.correct``` and pass original and corrected sentence to ```gf.highlight``` method.
 
 ```python
+from gramformer import Gramformer
+
+set_seed(1212)
+
 gf = Gramformer(models = 1, use_gpu=False) # 1=corrector, 2=detector
+
 
 influent_sentences = [
     "He are moving here.",
@@ -237,7 +245,7 @@ for influent_sentence in influent_sentences:
 ### Detector - Coming soon
 ```python
 from gramformer import Gramformer
-gf = Gramformer(models = 0, use_gpu=False) # 0=detector, 1=highlighter, 2=corrector, 3=all 
+gf = Gramformer(models = 2, use_gpu=False) # 1=corrector, 2=detector
 grammar_fluency_score = gf.detect(<your input sentence>)
 ```
 
