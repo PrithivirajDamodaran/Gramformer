@@ -261,10 +261,10 @@ grammar_fluency_score = gf.detect(<your input sentence>)
 
 ## Dataset
 The following techniques were used to generate datasets for fine-tunning the model prithivida/grammar_error_correcter_v1
-- Download, convert and filter WikiEdits
+- Download, convert and filter WikiEdits - (This is based on corpora generaion techniques mentioned in reference paper 1 below)
     - Harvest WikiEdits from a publicly available wikipedia edits [like this](https://github.com/snukky/wikiedits).
     - Convert WikiText edits to <orig, edit> pairs using a custom script.
-    - Filter out grammatical pairs using a ERRANT based custom script.
+    - Filter out grammatical pairs using a ERRANT (last paper in the reference) based custom script.
 - Download C4 based synthetic pairs available [here](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction).
 - Download PIE synthetic pairs available [here](https://github.com/awasthiabhijeet/PIE).
 
