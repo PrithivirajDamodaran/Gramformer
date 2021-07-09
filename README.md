@@ -130,8 +130,8 @@ for influent_sentence in influent_sentences:
 [Input]   We all eat the fish and then made dessert
 [Correction]  ('We all ate the fish and then made dessert.', -54.92893981933594)
 ----------------------------------------------------------------------------------------------------
-[Input]  I will eat fish for dinner and drink milk
-[Correction]  ('I eat fish for dinner and drink milk.', -45.26580810546875)
+[Input]  I ate fish for dinner and drink milk
+[Correction]  ('I will eat fish for dinner and drink milk.', -45.26580810546875)
 ----------------------------------------------------------------------------------------------------
 [Input]  what be the reason for everyone leave the company
 [Correction]  ('what is the reason for everyone leaving the company?', -52.93060302734375)
