@@ -110,7 +110,7 @@ for influent_sentence in influent_sentences:
 [Correction]  ('I am doing fine. How are you?', -36.7198371887207)
 ----------------------------------------------------------------------------------------------------
 [Input]  How is they?
-[Correction]  ('What are they?', -20.067779541015625)
+[Correction]  ('How are they?', -20.067779541015625)
 ----------------------------------------------------------------------------------------------------
 [Input]  Matt like fish
 [Correction]  ('Matt likes fish.', -33.768829345703125)
@@ -134,7 +134,7 @@ for influent_sentence in influent_sentences:
 [Correction]  ('I eat fish for dinner and drink milk.', -45.26580810546875)
 ----------------------------------------------------------------------------------------------------
 [Input]  what be the reason for everyone leave the company
-[Correction]  ('what be the reason for everyone leaving the company?', -52.93060302734375)
+[Correction]  ('what is the reason for everyone leaving the company?', -52.93060302734375)
 ----------------------------------------------------------------------------------------------------
 ```
 
