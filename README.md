@@ -104,7 +104,7 @@ for influent_sentence in influent_sentences:
 
 ```text
 [Input]  He are moving here.
-[Correction]  ('He was moving to here.', -36.84136199951172)
+[Correction]  ('He is moving here.', -36.84136199951172)
 ----------------------------------------------------------------------------------------------------
 [Input]  I am doing fine. How is you?
 [Correction]  ('I am doing fine. How are you?', -36.7198371887207)
