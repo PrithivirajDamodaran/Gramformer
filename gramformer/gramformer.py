@@ -95,7 +95,7 @@ class Gramformer:
                 edit_str_end + "'>" + edit_str_start + "</c>"
             orig_tokens[edit_spos] = st
 
-      for i in ignore_indexes:
+      for i in sorted(ignore_indexes, reverse=True):
         del(orig_tokens[i])
 
       return(" ".join(orig_tokens))
