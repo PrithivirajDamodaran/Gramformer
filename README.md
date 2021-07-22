@@ -63,7 +63,7 @@ As of today grammatical safety nets for authoring social contents (Post or Comme
 ```python
 pip3 install -U git+https://github.com/PrithivirajDamodaran/Gramformer.git
 
-# IMPORTANT NOTE: (If install runs endlessly resolving package versions in for instance colab, refer to [issue #22](https://github.com/PrithivirajDamodaran/Gramformer/issues/22))
+# IMPORTANT NOTE: (If install runs endlessly resolving package versions in for instance colab, refer to issue #22 - https://github.com/PrithivirajDamodaran/Gramformer/issues/22)
 ```
 ## Quick Start
 
