@@ -61,9 +61,9 @@ As of today grammatical safety nets for authoring social contents (Post or Comme
 
 ## Installation
 ```python
-pip3 install -U git+https://github.com/PrithivirajDamodaran/Gramformer.git
-
+pip3 install pip==20.1.1 
 # IMPORTANT NOTE: (If install runs endlessly resolving package versions in for instance colab, refer to issue #22 - https://github.com/PrithivirajDamodaran/Gramformer/issues/22)
+pip3 install -U git+https://github.com/PrithivirajDamodaran/Gramformer.git
 ```
 ## Quick Start
 
