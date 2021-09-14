@@ -1,4 +1,4 @@
-[![PyPI - License](https://img.shields.io/hexpm/l/plug)](https://github.com/PrithivirajDamodaran/Gramformer/blob/main/LICENSE)
+[![PyPI - License](https://img.shields.io/npm/l/express?style=flat-square)](https://github.com/PrithivirajDamodaran/Gramformer/blob/main/LICENSE)
 [![Visits Badge](https://badges.pufler.dev/visits/PrithivirajDamodaran/Gramformer)](https://badges.pufler.dev)
 
 <p align="center">
