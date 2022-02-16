@@ -63,9 +63,7 @@ As of today grammatical safety nets for authoring social contents (Post or Comme
 
 ## Installation
 ```python
-pip3 install pip==20.1.1 
-# IMPORTANT NOTE: (If install runs endlessly resolving package versions in for instance colab, refer to issue #22 - https://github.com/PrithivirajDamodaran/Gramformer/issues/22)
-pip3 install -U git+https://github.com/PrithivirajDamodaran/Gramformer.git
+pip install -U git+https://github.com/PrithivirajDamodaran/Gramformer.git
 ```
 ## Quick Start
 
@@ -108,37 +106,37 @@ for influent_sentence in influent_sentences:
 
 ```text
 [Input]  He are moving here.
-[Correction]  ('He is moving here.', -36.84136199951172)
+[Correction]  He is moving here.
 ----------------------------------------------------------------------------------------------------
 [Input]  I am doing fine. How is you?
-[Correction]  ('I am doing fine. How are you?', -36.7198371887207)
+[Correction]  I am doing fine. How are you?
 ----------------------------------------------------------------------------------------------------
 [Input]  How is they?
-[Correction]  ('How are they?', -20.067779541015625)
+[Correction]  How are they?
 ----------------------------------------------------------------------------------------------------
 [Input]  Matt like fish
-[Correction]  ('Matt likes fish.', -33.768829345703125)
+[Correction]  Matt likes to fish.
 ----------------------------------------------------------------------------------------------------
 [Input]  the collection of letters was original used by the ancient Romans
-[Correction]  ('the collection of letters was originally used by the ancient Romans', -58.805442810058594)
+[Correction]  the collection of letters was originally used by the ancient Romans.
 ----------------------------------------------------------------------------------------------------
 [Input]  We enjoys horror movies
-[Correction]  ('We enjoy horror movies.', -31.77159881591797)
+[Correction]  We enjoy horror movies.
 ----------------------------------------------------------------------------------------------------
 [Input]  Anna and Mike is going skiing
-[Correction]  ('Anna and Mike are going skiing.', -42.5970458984375)
+[Correction]  Anna and Mike are going skiing.
 ----------------------------------------------------------------------------------------------------
 [Input]  I walk to the store and I bought milk
-[Correction]  ('I walked to the store and I bought milk.', -46.33577346801758)
+[Correction]  I walked to the store and I bought milk.
 ----------------------------------------------------------------------------------------------------
 [Input]   We all eat the fish and then made dessert
-[Correction]  ('We all ate the fish and then made dessert.', -54.92893981933594)
+[Correction]  We all ate the fish and then made dessert.
 ----------------------------------------------------------------------------------------------------
-[Input]  I ate fish for dinner and drink milk
-[Correction]  ('I will eat fish for dinner and drink milk.', -45.26580810546875)
+[Input]  I will eat fish for dinner and drink milk
+[Correction]  I will eat fish for dinner and drink milk.
 ----------------------------------------------------------------------------------------------------
 [Input]  what be the reason for everyone leave the company
-[Correction]  ('what is the reason for everyone leaving the company?', -52.93060302734375)
+[Correction]  what are the reasons why everyone left the company?
 ----------------------------------------------------------------------------------------------------
 ```
 
@@ -146,7 +144,9 @@ for influent_sentence in influent_sentences:
 While Gramformer aims to post-process outputs from the generative models, Gramformer itself is a generative model. So the question arises, who will post-process the Gramformer outputs ? (I know, very meta :-)). In general all generative models have the tendency to generate spurious text sometimes, which we cannot control. So to make sure the gramformer grammar corrections (and highlights) are as accurate as possible, A quality estimator (QE) will be added. It can estimate a error correction quality score and use that as a filter on Top-N candidates to return only the best based on the score.
 
 ### Correcter with QE estimator - Available now
-Update: QE estimator is now built-in, gf.correct generates top N candidates, scores, ranks and returns the top ranked result.    
+QE Estimator support has been rolled back due to version conflicts lm-scorer poses
+<del>  Update: QE estimator is now built-in, gf.correct generates top N candidates, scores, ranks and returns the top ranked result.   </del>
+
 
 ### Get Edits - Available now
 For edit, call ```gf.correct``` and pass original and corrected sentence to ```gf.get_edits``` method.
