@@ -3,7 +3,7 @@ class Gramformer:
   def __init__(self, models=1, use_gpu=False):
     from transformers import AutoTokenizer
     from transformers import AutoModelForSeq2SeqLM
-    from lm_scorer.models.auto import AutoLMScorer as LMScorer
+    #from lm_scorer.models.auto import AutoLMScorer as LMScorer
     import errant
     self.annotator = errant.load('en')
     
@@ -12,7 +12,7 @@ class Gramformer:
     else:
         device = "cpu"
     batch_size = 1    
-    self.scorer = LMScorer.from_pretrained("gpt2", device=device, batch_size=batch_size)    
+    #self.scorer = LMScorer.from_pretrained("gpt2", device=device, batch_size=batch_size)    
     self.device    = device
     correction_model_tag = "prithivida/grammar_error_correcter_v1"
     self.model_loaded = False
@@ -47,11 +47,11 @@ class Gramformer:
         for pred in preds:  
           corrected.add(self.correction_tokenizer.decode(pred, skip_special_tokens=True).strip())
 
-        corrected = list(corrected)
-        scores = self.scorer.sentence_score(corrected, log=True)
-        ranked_corrected = [(c,s) for c, s in zip(corrected, scores)]
-        ranked_corrected.sort(key = lambda x:x[1], reverse=True)
-        return ranked_corrected
+        #corrected = list(corrected)
+        #scores = self.scorer.sentence_score(corrected, log=True)
+        #ranked_corrected = [(c,s) for c, s in zip(corrected, scores)]
+        #ranked_corrected.sort(key = lambda x:x[1], reverse=True)
+        return corrected
       else:
         print("Model is not loaded")  
         return None
