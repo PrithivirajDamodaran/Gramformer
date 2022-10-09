@@ -18,8 +18,8 @@ class Gramformer:
     self.model_loaded = False
 
     if models == 1:
-        self.correction_tokenizer = AutoTokenizer.from_pretrained(correction_model_tag)
-        self.correction_model     = AutoModelForSeq2SeqLM.from_pretrained(correction_model_tag)
+        self.correction_tokenizer = AutoTokenizer.from_pretrained(correction_model_tag, use_auth_token=True)
+        self.correction_model     = AutoModelForSeq2SeqLM.from_pretrained(correction_model_tag, use_auth_token=True)
         self.correction_model     = self.correction_model.to(device)
         self.model_loaded = True
         print("[Gramformer] Grammar error correct/highlight model loaded..")
