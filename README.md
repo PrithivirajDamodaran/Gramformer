@@ -69,14 +69,13 @@ pip install -U git+https://github.com/PrithivirajDamodaran/Gramformer.git
 ```
 ## Quick Start
 
-```python
+~~```python
 [IMPORTANT]
 If you are using in notebook, use the below line to login:
        from huggingface_hub import notebook_login
        notebook_login()
 else use:
-       huggingface-cli login
-```
+       huggingface-cli login```~~
 
 ### Correcter - Available now
 ```python
