@@ -1,5 +1,5 @@
 [![PyPI - License](https://img.shields.io/npm/l/express?style=flat-square)](https://github.com/PrithivirajDamodaran/Gramformer/blob/main/LICENSE)
-[![visitors](https://visitor-badge.glitch.me/badge?page_id=PrithivirajDamodaran.count_visitors)](https://visitor-badge.glitch.me)
+[![visitors](https://visitor-badge.glitch.me/badge?page_id=Gramformer.count_visitors)](https://visitor-badge.glitch.me)
 
 <p align="center">
     <img src="images/GLogo.png" width="35%" height="35%"/>
