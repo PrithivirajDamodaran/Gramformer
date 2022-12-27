@@ -2,7 +2,7 @@
 [![visitors](https://visitor-badge.glitch.me/badge?page_id=Gramformer.count_visitors)](https://visitor-badge.glitch.me)
 
 <p align="center">
-    <img src="images/GLogov1.png" width="35%" height="35%"/>
+    <img src="./images/GLogov1.png" width="35%" height="35%"/>
 </p>
 
 
