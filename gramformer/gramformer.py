@@ -6,8 +6,11 @@ class Gramformer:
     #from lm_scorer.models.auto import AutoLMScorer as LMScorer
     import errant
     import spacy
-    
-    nlp = spacy.load(model, disable=["ner"])
+
+    nlp = None
+    if model is not None:
+        nlp = spacy.load(model, disable=["ner"])
+          
     self.annotator = errant.load('en', nlp=nlp)
     
     if use_gpu:
